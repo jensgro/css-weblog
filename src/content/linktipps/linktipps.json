@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/post.njk",
+  "permalink": "linktipps/{{title | slugify}}.html",
+  "bodyClass": "linktipps"
+}

@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/post.njk",
+  "permalink": "codepen/{{title | slugify}}.html",
+  "bodyClass": "codepen"
+}
