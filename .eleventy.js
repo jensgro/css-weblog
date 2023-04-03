@@ -8,7 +8,8 @@ const configPath = "./src/_11ty/";
 // module import shortcodes
 const {
   includeRaw,
-  liteYoutube
+  liteYoutube,
+  figImg
 } = require(configPath+'shortcodes/index.js');
 
 // filters
@@ -36,6 +37,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // 	--------------------- Custom shortcodes ---------------------
+  eleventyConfig.addShortcode('figImg', figImg);
   eleventyConfig.addShortcode('youtube', liteYoutube);
   eleventyConfig.addShortcode('include_raw', includeRaw);
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`); // current year, stephanie eckles
