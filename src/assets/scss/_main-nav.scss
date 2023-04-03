@@ -1,0 +1,50 @@
+$nav-vars: (
+  mainNavBgCol: #{get-color("grey", dark)},
+  mainNavItemText: #{get-color("black")},
+  mainNavItemBgCol: #{get-color("white")},
+  inactiveNavBgHover: #{get-color("grey")},
+  activeNavBG: #{get-color("red", my)},
+  activeNavText: #{get-color("white")},
+);
+@include cssvars($nav-vars, ".main-nav");
+
+.main-nav {
+  background-color: var(--mainNavBgCol);
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space2;
+    padding-inline: $space1;
+
+  }
+
+  &__item {
+    color: var(--mainNavItemText);
+    background-color: var(--mainNavItemBgCol);
+    text-transform: capitalize;
+
+    &:first-of-type {
+      margin-right: auto;
+    }
+
+  }
+
+  &__link {
+    display: inline-block;
+    color: currentColor;
+    text-decoration: none;
+    padding: $space1;
+
+    &:hover,
+    &:focus {
+      background-color: var(--inactiveNavBgHover);
+    }
+
+    &--active {
+      background-color: var(--activeNavBG);
+      color: var(--activeNavText);
+      font-weight: 700;
+    }
+  }
+}

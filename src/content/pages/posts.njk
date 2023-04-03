@@ -1,0 +1,17 @@
+---
+layout: layouts/post.njk
+permalink: /posts.html
+bodyClass: post
+eleventyNavigation:
+  key: posts
+  order: 2
+
+title: "My Posts"
+headerImage: "875x250-green.png"
+---
+
+<ul>
+  {%- for p in collections.post %}
+    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
+  {%- endfor -%}
+</ul>

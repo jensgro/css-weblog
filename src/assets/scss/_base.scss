@@ -1,0 +1,133 @@
+// The custom properties for :root
+$root-vars: (
+  textColor: #{get-color("black")},
+  pageBgColor: #{get-color("white")},
+  linkColor: #{get-color("red", my)},
+  linkColorHover: #{lighten(get-color("red", my), 10%)},
+);
+
+@include cssvars($root-vars);
+
+
+// A modified version of Andy Bell's "modern reset" https://github.com/hankchizljaw/modern-css-reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0 0 $space2 0;
+}
+
+/* Set core body defaults */
+body {
+  color: var(--textColor);
+  background-color: var(--pageBgColor);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
+  font-size: 1rem;
+  padding: 0;
+  font-family: "pt-sans", $systemfonts-sans-serif;
+  font-weight: 500;
+}
+
+
+small, .text_small {font-size: 0.8rem;}
+
+// modular type-scale: https://type-scale.com/
+h1, h2, h3, h4, h5, h6 {
+  margin: 3rem 0 1.38rem;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 0;
+}
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+h5 {font-size: 1.25rem;}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  @include nolist;
+}
+
+a {
+  color: var(--linkColor);
+
+  &:hover, &:focus-visible {
+    color: var(--linkColorHover);
+  }
+}
+
+/* Make images easier to work with */
+img, svg, video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p code {
+  display: inline-block;
+  padding: 0.125em 0.4em;
+  font-family: $systemfonts-mono;
+  background: $mediumbrown;
+  border-radius: 8px;
+}
+
+/* hide only visually */
+/* https://gist.github.com/jensgro/743c37c3c1b226f7917fa0fc0825e3c2 */
+.visuallyhidden {
+  @include visuallyhidden;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Avoid visible focus style on focusable elements like main */
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}

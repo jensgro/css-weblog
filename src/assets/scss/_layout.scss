@@ -1,0 +1,12 @@
+.container {
+  --container-bgcolor: get-color("white");
+
+  background-color: var(--container-bgcolor);
+  padding: $space2 $space4;
+  margin: 0 $space2;
+
+  @media (min-width: $lg) {
+    max-width: $maxwidth;
+    margin: 0 auto;
+  }
+}

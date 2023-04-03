@@ -1,0 +1,34 @@
+.siteheader {
+  --headline-bgcolor: rgba(0,0,0,0.125);
+  --headline-color: #fff;
+
+  aspect-ratio: 7 / 2;
+  position: relative;
+
+  @media print {
+    aspect-ratio: auto;
+  }
+
+  &__headline,
+  &__subline {
+    margin-bottom: 0;
+  }
+
+  &__headline-cnt {
+    position: static;
+    padding: $space2 $space4 $space2 $space2;
+    color: var(--headline-color);
+    background-color: var(--headline-bgcolor);
+
+    @media (min-width: $md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media print {
+      position: static;
+    }
+  }
+}
+
