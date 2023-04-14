@@ -7,31 +7,55 @@ eleventyNavigation:
   key: home
   order: 1
 
-title: "My title"
-subline: "My subtitle"
+title: "CSS-Weblog"
+subline: "CSS und mehr"
 headerImage: "875x250-myred.png"
 ---
 
 {%- for item in categories %}
     <h2>{{ item.title }}</h2>
-    {% if "post" in item.cat %}
-      {% for post in collections.post %}
+    {% if "css-grid" in item.cat %}
+      {% for post in collections.grid %}
         {% if loop.first %}<ul>{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
     {% endif %}
 
-    {% if "category2" in item.cat %}
-      {% for post in collections.cat2 %}
+    {% if "flexbox" in item.cat %}
+      {% for post in collections.flexbox %}
         {% if loop.first %}<ul>{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
     {% endif %}
 
-    {% if "category3" in item.cat %}
-      {% for post in collections.cat3 %}
+    {% if "til" in item.cat %}
+      {% for post in collections.til %}
+        {% if loop.first %}<ul>{% endif %}
+          {% include "partials/link-list-item.njk" %}
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if "ideen" in item.cat %}
+      {% for post in collections.ideen %}
+        {% if loop.first %}<ul>{% endif %}
+          {% include "partials/link-list-item.njk" %}
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if "codepen" in item.cat %}
+      {% for post in collections.codepen %}
+        {% if loop.first %}<ul>{% endif %}
+          {% include "partials/link-list-item.njk" %}
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if "linktipps" in item.cat %}
+      {% for post in collections.linktipps %}
         {% if loop.first %}<ul>{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}

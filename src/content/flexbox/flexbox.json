@@ -1,5 +1,6 @@
 {
   "layout": "layouts/article.njk",
   "permalink": "flexbox/{{title | slugify}}.html",
-  "bodyClass": "article"
+  "bodyClass": "article",
+  "tags": "flexbox"
 }
