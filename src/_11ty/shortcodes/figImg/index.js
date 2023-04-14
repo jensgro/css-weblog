@@ -1,7 +1,7 @@
 const figImg = (img, figCaption, alt) => {
-  return `<figure class="card">
-    <img src="../../../assets/img/${img}" class="card-img-top" alt="${alt}">
-    <figcaption class="card-footer">${figCaption}</figcaption>
+  return `<figure class="card card--img">
+    <img src="../../../assets/img/${img}" class="card__image" alt="${alt}">
+    <figcaption class="card__footer">${figCaption}</figcaption>
   </figure>`;
 };
 

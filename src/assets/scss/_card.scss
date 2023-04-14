@@ -1,0 +1,23 @@
+.card {
+  margin: $space4 0;
+
+  &__footer {
+    padding: $space2;
+    background-color: lighten(#358ccb, 40);
+  }
+
+  &--code {
+    .card__footer {
+      box-shadow: -1px 0 0 0 lighten(#358ccb, 40), 0 0 0 1px lighten(#358ccb, 40);
+    }
+  }
+  &--img {
+    border: 1px solid $grey;
+
+    .card__image {
+      margin: $space2;
+      width: calc(100% - ($space2 * 2));
+    }
+  }
+
+}

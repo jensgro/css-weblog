@@ -6,7 +6,7 @@ headerImage: "875x250-myred.png"
 
 Ein "Grid" ist in der Gestaltung ein alter Hut und demnach auch in der Frontend-Entwicklung bekannt. Er bezeichnet die Verteilung von Inhalten nach einem unsichtbaren Raster (engl.: grid). Bisherige Raster sind grundsätzlich eindimensional ausgerichtet. In unserer westlichen Leserichtung sind die Gridspalten vertikal ausgerichtet. Viele Jahre haben wir - nachdem Layouttabellen endlich ausgestorben waren - diese Grids mit Floats realisiert. Die Umsetzung war manchmal hakelig, es gab einige störende Browser-Bugs. Deshalb waren generalisierte Lösungen beliebt. Die von Bootstrap ist sicherlich die bekannteste.
 
-{% figImg "css-grid/beispiel-grid.png", "Die vertikalen, grauen Balken stellen das Grid dar, das im Hintergrund existiert. Die Inhalte werden mittels Floats darauf platziert.", "Ein Layout wird von einem halbdurchsichtigen Grid überlagert." %}
+<!-- {% figImg "css-grid/beispiel-grid.png", "Die vertikalen, grauen Balken stellen das Grid dar, das im Hintergrund existiert. Die Inhalte werden mittels Floats darauf platziert.", "Ein Layout wird von einem halbdurchsichtigen Grid überlagert." %} -->
 
 Floats waren niemals für Seitenlayouts vorgesehen. Sie werden nur mangels besserer Alternativen am Häufigsten genutzt. Alternativ kommen gelegentlich auch absolute Positionierung oder display: inline-block zum Einsatz. Als 2011 mit der Spezifikation von CSS-Grids begonnen wurde, hatten Webworker schon Erfahrungen mit teils komplizierten Layouts gemacht. Es waren auch Limitierungen der bislang verwendeten Techniken bekannt.
 
@@ -41,7 +41,7 @@ Wir erstellen ein Grid, in dem wir dem Elterncontainer ``display: grid;`` zuweis
 
 Zusätzlich wird an dem Grid-Container die Art des Rasters bestimmt. Dies geschieht über die Definition der Breite und Anzahl der Spalten (``grid-template-columns``) und eventueller Zwischenräume (``gap`` bzw. ``row-gap``und ``column-gap``) definieren. Der Code für ein erstes Grid könnte folgendermassen aussehen:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-container {
     display: grid;
@@ -49,14 +49,14 @@ Zusätzlich wird an dem Grid-Container die Art des Rasters bestimmt. Dies geschi
     gap: 20px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         <p>Ein einfacher Grid-Container entsteht. Den Code gibt es auf <a href="https://codepen.io/jensgro/full/mpVjGQ">Codepen</a>.</p>
     </figcaption>
 </figure>
 
  Durch `grid-template-columns` wird in diesem Beispiel ein vierspaltiges Layout definiert, dessen Spalten jeweils 100px breit sind. Mit jedem fünften Grid-Item wird eine neue visuelle Zeile eröffnet. Dafür müssen keine neuen Grid-Container erstellt werden. Sie werden erst dann notwendig, wenn sich die Art des Layouts ändert, also die Breiten und die Anzahl der Spalten. Um die Spalten nicht direkt aneinander kleben zu lassen, empfiehlt es sich, einen Abstand zwischen Spalten und Zeilen zu definieren. Mit ``row-gap`` und ``column-gap`` kann man diese Abstände explizit steuern. Einfacher ist es mit der Kurzschreibweise ``gap``. Wie bei ``padding``und ``margin`` kann mit dieser Kurzschreibweise sowohl ein Wert für beide Eigenschaften zugewiesen werden, als auch einfach ein wenig Tipparbeit gespart werden. Der erste Wert bezieht sich auf die Zeilen, der zweite auf die Spalten:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-container-1 {
     grid-gap: 20px;
@@ -65,7 +65,7 @@ Zusätzlich wird an dem Grid-Container die Art des Rasters bestimmt. Dies geschi
     grid-gap: 20px 10px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         <p>Zwei unterschiedliche Arten des Umgangs mit ``gap``.</p>
     </figcaption>
 </figure>
@@ -131,7 +131,7 @@ Die repeat-Syntax ist denkbar einfach: Innerhalb des Klammerausdrucks wird erst 
 
 So kann man mit sehr wenig Code das Bootstrap-Grid ([Codepen-Beispiel](https://codepen.io/jensgro/full/LeRPrK))  nachbauen:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-12col {
     display: grid;
@@ -139,13 +139,13 @@ So kann man mit sehr wenig Code das Bootstrap-Grid ([Codepen-Beispiel](https://c
     grid-gap: 10px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Bootstrap-Grid - Ausgangsposition
     </figcaption>
 </figure>
 
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-4-12 {
     display: grid;
@@ -153,7 +153,7 @@ So kann man mit sehr wenig Code das Bootstrap-Grid ([Codepen-Beispiel](https://c
     grid-gap: 10px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Vier gleich große Spalten
     </figcaption>
 </figure>
@@ -186,7 +186,7 @@ Die Fraction-Einheit funktioniert hier anders. Der Browser schaut erst, welche B
 
 Das Beispiel mit den Prozentwerten müsste man mittels ``calc()`` folgendermassen korrigieren:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-prozent-2 {
     grid-template-columns:
@@ -196,7 +196,7 @@ Das Beispiel mit den Prozentwerten müsste man mittels ``calc()`` folgendermasse
         calc(25% - 10px);
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Breitenkorrektur mit calc()
     </figcaption>
 </figure>
@@ -205,7 +205,7 @@ Diese Vorgehensweise ist umständlich, schlecht lesbar und fehleranfällig. Schl
 
 Selbstverständlich kann die Einheit ``fr`` mit anderen Einheiten vermischt werden. Es geht schließlich hierbei in gewisserweise um "[Resteverwertung](https://codepen.io/jensgro/full/vpKxNa)".
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-fr-1 {
     grid-template-columns: 100px 1fr 1fr 3fr;
@@ -217,7 +217,7 @@ Selbstverständlich kann die Einheit ``fr`` mit anderen Einheiten vermischt werd
     grid-template-columns: 1fr 30% 15rem 100px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Andere mögliche Breiten-Kombinationen
     </figcaption>
 </figure>
@@ -236,20 +236,20 @@ Für flexible, responsive Layouts kann es manchmal wichtig sein, eine minimale u
 
 Grids kann man auch in der Höhe flexibel begrenzen. [Im entsprechenden Codepen-Beispiel](https://codepen.io/jensgro/full/BJzwBj) ist einen Blindtext versteckt. Durch Klick auf den Button wird er angezeigt und wieder versteckt. Die zweite Zeile verändert dadurch ihre Höhe. Die Bedingungen dafür sind folgendermaßen gesetzt:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-minmax-2 {
     grid-template-rows: 150px minmax(80px, 2fr) 1fr 1fr;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         minimale und maximale Höhe
     </figcaption>
 </figure>
 
 In der Funktion ``minmax()`` darf die Einheit ``fr`` nur als Maximalwert, nicht als Minimalwert eingesetzt werden. Schließlich ist ``fr`` ein relativer Wert. Ein definitiver Minimalwert liesse sich damit nie erstellen. Zusätzlich gibt es noch die Schlüsselbegriffe ``auto``, ``min-content`` und ``max-content``. Mit ``min-content`` ist die Mindestbreite gemeint, die der Inhalt benötigt. Also bspw. eine Bildbreite oder das längste Wort in einem Text. Mit ``max-content`` ist dementsprechend das Maximum an für den Inhalt notwendigem Platz gemeint. Für den Maximalwert, also den zweiten Wert in der ``minmax()``-Funktion, sind ``max-content`` und ``auto`` identisch. So ergeben sich folgende Varianten:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-minmax-3 {
     grid-template-columns: 150px minmax(100px, auto) 1fr 1fr;
@@ -261,22 +261,20 @@ In der Funktion ``minmax()`` darf die Einheit ``fr`` nur als Maximalwert, nicht 
     grid-template-columns: 150px minmax(150px, max-content) 3fr 1fr;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Schlüsselbegriffe bei ``minmax()``
     </figcaption>
 </figure>
 
-<aside>
-<p>Ausserhalb von CSS-Grid haben die Funktionen <code>min()</code>, <code>max()</code> und <code>clamp()</code> mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen <a href="https://ishadeed.com/article/css-min-max-clamp/">Einführungsartikel</a> geschrieben. In einem späteren Artikel kümmert er sich um <a href="https://ishadeed.com/article/use-cases-css-comparison-functions/">Anwendungsfälle</a> dieser Funktionen.</p>
-
-<!-- Ausserhalb von CSS-Grid haben die Funktionen ``min()``, ``max()`` und ``clamp()`` mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen [Einführungsartikel](https://ishadeed.com/article/css-min-max-clamp/) geschrieben. In einem späteren Artikel kümmert er sich um [Anwendungsfälle](https://ishadeed.com/article/use-cases-css-comparison-functions/) dieser Funktionen. -->
-</aside>
+{% aside %}
+Ausserhalb von CSS-Grid haben die Funktionen ``min()``, ``max()`` und ``clamp()`` mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen [Einführungsartikel](https://ishadeed.com/article/css-min-max-clamp/) geschrieben. In einem späteren Artikel kümmert er sich um [Anwendungsfälle](https://ishadeed.com/article/use-cases-css-comparison-functions/) dieser Funktionen.
+{% endaside %}
 
 ## Autofit und Autofill
 
 Der erste Parameter der ``repeat()``-Funktion ist die Anzahl der Wiederholungen des darauffolgenden Breiten-Musters. Anstatt einen konkreten Wert einzugeben, kann man die Schlüsselworte ``auto-fit`` und ``auto-fill`` benutzen.
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-container-autofill {
     display: grid;
@@ -291,7 +289,7 @@ Der erste Parameter der ``repeat()``-Funktion ist die Anzahl der Wiederholungen 
     grid-gap: 10px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         auto-fill und auto-fit im Einsatz, mehr Beispiele bei [Codepen](https://codepen.io/jensgro/full/xpOvmW)
     </figcaption>
 </figure>
@@ -308,7 +306,7 @@ Auch bei ``auto-fit`` versucht der Browser, den Platz so gut es geht mit Grid-It
 
 Die einzelnen Zellen eines Grids können Webworker mit der Eigenschaft ``grid-template-areas`` benamen. Dabei können einfache Buchstaben genauso genommen werden wie ganze Wörter. Im folgenden Beispiel werden die Zellen eines 3x3-Rasters mit Namen versehen. Gleiche Namen sorgen dafür, dass die Zellen eine "Grid Area" bilden. Dabei müssen die Areas Rechtecke bilden. Die Eigenschaft ``grid-area`` ist nur die Kurzschreibform für ``grid-row-start``, ``grid-row-end`` bzw. ``grid-column-start`` und ``grid-column-end``. Die Orientierung hält sich also immer in einer visuellen Zeile oder Spalte. Deshalb ist es leider nicht möglich, ein Grid-Item in einer L-Form innerhalb eines Grids zu platzieren.
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-with-a-name {
     display: grid;
@@ -321,14 +319,14 @@ Die einzelnen Zellen eines Grids können Webworker mit der Eigenschaft ``grid-te
     "fuss fuss fuss";
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Benannte Bereiche (areas)
     </figcaption>
 </figure>
 
 Nachdem die Bereiche des Grids benannt worden sind, müssen diese noch mit Inhalten befüllt werden. Dazu können Sie Ihre Inhalte nun bequem anhand der Namen der Areas verteilen.
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .main-header {
     grid-area: kopf;
@@ -346,21 +344,21 @@ Nachdem die Bereiche des Grids benannt worden sind, müssen diese noch mit Inhal
     grid-area: fuss;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Den Inhalten die Grid-Areas zuweisen
     </figcaption>
 </figure>
 
 {% figImg "css-grid/grid-area-1.png", "Die Inhalte sind den passenden Grid-Areas zugewiesen." %}
 
-<aside>
+{% aside %}
 <p>Der interessante Nebeneffekt dieser Technik ist, dass die Darstellung unabhängig von der Codereihenfolge ist. Der Browser weiß schließlich, welche Container in welchen Bereich des Grids sollen. Dies ist besonders praktisch für <a href="https://codepen.io/jensgro/full/GyjpMM">unterschiedliche Breakpoints einer responsiven Seite</a>. Zu lässig sollte man aber mit dieser Technik nicht umgehen. Denn wie bei der Flexbox-Eigenschaft <code>order</code> steht die große visuelle Kontrolle im Konflikt mit der Usability und Accessibility. Seitenbereiche, die ich visuell an anderer Stelle darstelle, als sie nach der Codereihenfolge sein sollten, sollten keine interaktiven Elemente besitzen, die mit der Tastatur fokussiert werden können. Genauer: es sollten sich keine Buttons, Links, Formularelemente darin befinden. Die Tabreihenfolge richtet sich nach der Codereihenfolge, nicht nach der visuellen.</p>
 <p>Deshalb sind solche Umschichtungen in meinen Augen nur dann sinnvoll, wenn sie auf einer rein mobilen Darstellung angewendet werden. Auf dem Smartphone tabbe ich nicht nicht durch die Gegend.</p>
-</aside>
+{% endaside %}
 
 Die Anzahl der Namen mit der Anzahl der zur Verfügung stehenden Grid-Items pro visueller Zeile übereinstimmen muss. Eventuell gewünschte Auslassungen werden mit einem Punkt realisiert:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .grid-with-a-name-2 {
     grid-template-columns: 1fr 3fr 1fr;
@@ -370,7 +368,7 @@ Die Anzahl der Namen mit der Anzahl der zur Verfügung stehenden Grid-Items pro 
                 "fuss fuss .";
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Auslassung einer Zelle
     </figcaption>
 </figure>
@@ -462,7 +460,7 @@ Nachdem wir einen kleinen Einblick in die mächtige Technik der CSS-Grids bekomm
 
 Der große Unterschied von CSS-Grids zu Floats und dem ebenfalls recht neuen Flexbox ist, dass CSS-Grids zwei-dimensional agieren können. Floats funktionieren nur horizontal, Flexbox nur horizontal oder vertikal. Bei den CSS-Grids können die Grid-Items horizontal und vertikal verteilt werden:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "css" %}
 .container{
     display: grid;
@@ -474,7 +472,7 @@ Der große Unterschied von CSS-Grids zu Floats und dem ebenfalls recht neuen Fle
     grid-gap: 60px;
 }
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Zwei-Dimensionale Verteilung mit CSS-Grids
     </figcaption>
 </figure>
@@ -493,7 +491,7 @@ Man kann dafür sorgen, dass Flex-Items, die nicht mehr in eine visuelle Zeile p
 
 Durch die Hinzugabe der Eigenschaft ``flex-direction: column;`` würden die Flex-Items des obigen Beispiels nicht mehr horizontal, sondern vertikal laufen. Man muss zwischen beiden Optionen wählen. Bei CSS-Grids muss man dies nicht. Man kann die einen Elemente horizontal, die anderen vertikal ausrichten. Und dafür benötigen wir zudem weniger HTML. Denn da Flexbox nur in eine Richtung funktioniert, benötigen wir zur Kombination beider Richtungen einen extra Wrapper, wie ich an einem [einfach gehaltenen Layoutbeispiel](https://codepen.io/jensgro/full/GQgMdo) demonstriere. In der [CSS-Grid-Variante](https://codepen.io/jensgro/full/jZEaQJ) wird der Wrapper nicht benötigt. Die grobe Struktur beider Varianten sieht folgendermaßen aus:
 
-<figure class="card">
+<figure class="card card--code">
     {% highlight "html" %}
 <!-- Die Flexbox-Variante -->
 <div class="container">
@@ -512,7 +510,7 @@ Durch die Hinzugabe der Eigenschaft ``flex-direction: column;`` würden die Flex
     <footer class="page-footer"> </footer>
 </div>
     {% endhighlight %}
-    <figcaption class="card-footer">
+    <figcaption class="card__footer">
         Struktur einer einfachen Seite im Vergleich: Flexbox und CSS-Grid
     </figcaption>
 </figure>
