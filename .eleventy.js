@@ -9,7 +9,8 @@ const configPath = "./src/_11ty/";
 const {
   includeRaw,
   liteYoutube,
-  figImg
+  figImg,
+  details
 } = require(configPath+'shortcodes/index.js');
 
 // filters
@@ -37,6 +38,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // 	--------------------- Custom shortcodes ---------------------
+  eleventyConfig.addPairedShortcode('details', details);
   eleventyConfig.addShortcode('figImg', figImg);
   eleventyConfig.addShortcode('youtube', liteYoutube);
   eleventyConfig.addShortcode('include_raw', includeRaw);

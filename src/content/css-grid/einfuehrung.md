@@ -407,13 +407,13 @@ Der Autor markiert die Auslassungen in diesem Beispiel mit zwei Punkten. Auf die
 
 Im ersten Halbjahr 2022 wurde der Support für den IE11 eingestellt. Aus Frontendentwickler-Sicht ist dieser Browser tot. Deshalb gibt es keinen Grund mehr, sich nicht intensiv mit allen Facetten von CSS-Grid auseinanderzusetzen. Alle modernen Browser beherrschen alle Aspekte dieser Technik.
 
-### IE10 und IE11
+{% details "IE10 und IE11" %}
 
 IE10 und IE11 - die wie bei Flexbox die ersten Browser waren, die CSS-Grids unterstützen - hatten ein paar Lücken in der Implementierung. Man kann in diesen alten Browsern Grid nutzen, aber nicht alle Features. Vor allem Grid-Areas werden in diesen alten Schlachtschiffen nicht unterstützt. Alle anderen Eigenschaften haben ein „-ms-“-Prefix. Manche werden komplett anders geschrieben. Da der IE wenn nicht tot, so doch fast tot ist, lohnt es sich nicht, zuviel Energie in das Lernen der spezifischen Unterschiede zu stecken. Schon gar nicht sollte man alle Unterschieden manuell pflegen. Das beliebte Tool [Autoprefixer](https://goo.gl/TLpWr8) hilft. Die CSS-Grids müssen allerdings in der Konfiguration aktiviert werden:
 
-{% highlight "js" %}
-    autoprefixer({ grid: true })
-{% endhighlight %}
+````
+autoprefixer({ grid: true })
+````
 
 Doch mit Autoprefixer allein ist uns beim Umgang mit dem IE nicht geholfen. Rachel Andrew führt [in einer Tabelle](https://goo.gl/RGDTLj) alle Grid-Eigenschaften und ihre möglichen IE-spezifischen Pendants auf. Dabei fällt auf, dass viele aktuelle Eigenschaften keine Entsprechung in der alten Version haben und andere wiederum so gelöst werden, dass Autoprefixer leider keine Hilfe ist.
 
@@ -421,7 +421,7 @@ Bei einem einfachen Grid-Layout ist die Chance hoch, es auch für den IE zum Lau
 
 CSS-Grid ist die Zukunft des Layouts und für manchen schon die Gegenwart.
 
-{% figImg "css-grid/caniuse.png", "Can I Use gibt hoffnungsvolle Signale." %}
+{% enddetails %}
 
 ### Progressive Enhancement
 

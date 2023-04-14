@@ -110,6 +110,34 @@ p code {
   border-radius: 8px;
 }
 
+/* ==== details/summary ==== */
+details {
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  //border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.details__content {
+  margin-inline: auto;
+  max-width: 90%;
+}
+
+
 /* hide only visually */
 /* https://gist.github.com/jensgro/743c37c3c1b226f7917fa0fc0825e3c2 */
 .visuallyhidden {

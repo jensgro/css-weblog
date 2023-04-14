@@ -3,9 +3,11 @@
 const includeRaw = require('./includeRaw');
 const liteYoutube = require('./youtube-lite');
 const figImg = require('./figImg');
+const details = require('./details');
 
 module.exports = {
   includeRaw,
   liteYoutube,
-  figImg
+  figImg,
+  details
 };
