@@ -10,7 +10,8 @@ const {
   includeRaw,
   liteYoutube,
   figImg,
-  details
+  details,
+  aside
 } = require(configPath+'shortcodes/index.js');
 
 // filters
@@ -39,6 +40,7 @@ module.exports = function(eleventyConfig) {
 
   // 	--------------------- Custom shortcodes ---------------------
   eleventyConfig.addPairedShortcode('details', details);
+  eleventyConfig.addPairedShortcode('aside', aside);
   eleventyConfig.addShortcode('figImg', figImg);
   eleventyConfig.addShortcode('youtube', liteYoutube);
   eleventyConfig.addShortcode('include_raw', includeRaw);

@@ -523,8 +523,7 @@ Wir sollten allerdings die alten, traditionellen Techniken nicht vergessen. Sie 
 
 Es ist zudem ein Irrtum, dass CSS-Grids alle anderen Techniken ersetzen. Jede Technik hat ihre Berechtigung, ihre Vor- und Nachteile. CSS-Grids füllen eine Lücke, die vorher nur mit Müh und Not mit Hilfe von dazu nicht primär nicht gedachten Techniken gestopft wurde. Grids können in sehr vielen Situationen ihre Stärken ausspielen.
 
-<aside>
-
+{% aside %}
 ## Informationsquellen
 
 CSS-Grids sind eine umfangreiche und teilweise kompliziert zu erfassende Technik. Vertiefende und erweiternde Informationen gibt es an vielen Ecken des Internets, sowohl als einzelne Artikel, komplette Infoseiten und als Videotutorials unterschiedlicher Komplexität.
@@ -538,7 +537,7 @@ Bei CSS-Tricks gibt es den [A Complete Guide to CSS Grid](https://css-tricks.com
 Oder sind ein paar Videotutorials gefällig? Dann sind die 25 Lektionen von Wes Bos sicher eine gute Empfehlung. Der Kanadier hat – von Mozilla finanziert – seinen [kostenlosen und umfangreichen Kurs](https://cssgrid.io) Anfang 2018 veröffentlicht. Inhaltlich kann daran aber kein Vergang sein. Konkrete praktische Fragen geht Jen Simmons in ihrer Videocast-Serie [Layoutland](https://goo.gl/Bw5DAq) auf Youtube an.
 
 [Griddy](https://griddy.io/) ist ein Online-Tool, mit dem man sich ein Grid zusammenklicken kann. Natürlich mit Codeausgabe. Spielerisch kann man sich dem Thema im [Grid Garden](http://cssgridgarden.com/#de) nähern.
-</aside>
+{% endaside %}
 
 ## Fazit
 
