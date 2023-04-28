@@ -1,0 +1,8 @@
+{
+  "cacheDurations": {
+    "hourly": "1h",
+    "daily": "23h",
+    "weekly": "167h",
+    "monthly": "671h"
+  }
+}

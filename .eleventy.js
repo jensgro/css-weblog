@@ -1,9 +1,12 @@
 const fs = require("fs");
+
+const configPath = "./src/_11ty/";
+const dataPath = "./src/_data/";
+
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-const configPath = "./src/_11ty/";
 
 // module import shortcodes
 const {
@@ -24,8 +27,10 @@ const postDescending = require(configPath+"collections/postDescending.js");
 
 // plugins
 const markdownLib = require(configPath+'plugins/markdown.js');
+const caniuse = require(configPath+'plugins/caniuse.js');
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(caniuse);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(syntaxHighlight);
