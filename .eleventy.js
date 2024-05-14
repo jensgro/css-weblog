@@ -2,6 +2,7 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const embedCodePen = require("@manustays/eleventy-plugin-codepen-iframe");
 
 const configPath = "./src/_11ty/";
 
@@ -11,7 +12,8 @@ const {
   liteYoutube,
   figImg,
   details,
-  aside
+  aside,
+  codepenImg
 } = require(configPath+'shortcodes/index.js');
 
 // filters
@@ -30,6 +32,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addPlugin(embedCodePen, {
+		tabs: "html, css, js,result",
+		user: "jensgro",
+    height: 500,
+    theme: "flocke"
+	});
+
   eleventyConfig.addFilter("htmlDateString", htmlDateString);
   eleventyConfig.addFilter("head", head);
 
@@ -42,6 +51,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPairedShortcode('details', details);
   eleventyConfig.addPairedShortcode('aside', aside);
   eleventyConfig.addShortcode('figImg', figImg);
+  eleventyConfig.addShortcode('codepenImg', codepenImg);
   eleventyConfig.addShortcode('youtube', liteYoutube);
   eleventyConfig.addShortcode('include_raw', includeRaw);
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`); // current year, stephanie eckles
