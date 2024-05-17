@@ -1,13 +1,23 @@
-{% set templateClass = "tmpl-post" %}
+{% set templateClass = "tmpl-codepen" %}
 
 {% include "partials/page-header.njk" %}
 {% include "partials/navigation.njk" %}
 {% include "partials/site-header.njk" %}
+
 <div class="container">
   <main class="post-cnt">
-    {{ content | safe }}
+    <div class="codepen-overview">
+    {% block images %}
+
+    {% endblock %}
+    </div>
+    <div class="codepen-list">
+    {% block codepenlist %}
+
+    {% endblock %}
+    </div>
   </main>
 </div>
+
 {% include "partials/footer.njk" %}
-{% include "partials/youtube-script.njk" %}
 {% include "partials/end.njk" %}
