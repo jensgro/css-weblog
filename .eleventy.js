@@ -3,6 +3,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedCodePen = require("@manustays/eleventy-plugin-codepen-iframe");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 const configPath = "./src/_11ty/";
 
@@ -31,6 +32,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.addPlugin(embedCodePen, {
 		tabs: "html, css, js,result",

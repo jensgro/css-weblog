@@ -5,17 +5,13 @@
 {% include "partials/site-header.njk" %}
 
 <div class="container">
-  <main class="post-cnt">
+  <main class="codepen-cnt">
     <div class="codepen-overview">
     {% block images %}
 
     {% endblock %}
     </div>
-    <div class="codepen-list">
-    {% block codepenlist %}
-
-    {% endblock %}
-    </div>
+    {% include "partials/codepenlist.njk" %}
   </main>
 </div>
 
