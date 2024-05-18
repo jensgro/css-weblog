@@ -6,10 +6,8 @@
 
 <div class="container">
   <main class="codepen-cnt">
-    <div class="codepen-overview">
-    {% block images %}
-
-    {% endblock %}
+    <div class="codepen-overview neu">
+    {% include "partials/codepenimage.njk" %}
     </div>
     {% include "partials/codepenlist.njk" %}
   </main>

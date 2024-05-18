@@ -1,0 +1,8 @@
+{% for pen in codepenlist %}
+<figure class="card card--img">
+    <img src="https://shots.codepen.io/jensgro/pen/{{ pen.item }}-512.webp" class="card__image" alt="">
+    <figcaption class="card__footer">
+      <a href="{{ pen.url | url }}">{{ pen.title }}</a>
+    </figcaption>
+</figure>
+{% endfor %}
