@@ -70,19 +70,6 @@ module.exports = function(eleventyConfig) {
   // 	--------------------- Plugins ---------------------
   eleventyConfig.setLibrary('md', markdownLib);
 
-
-
-  // /* Markdown Overrides */
-  // let markdownLibrary = markdownIt({
-  //   html: true,
-  //   breaks: true,
-  //   linkify: true
-  // }).use(markdownItAnchor, {
-  //   permalink: true,
-  //   permalinkClass: "direct-link",
-  //   permalinkSymbol: "#"
-  // });
-
   eleventyConfig.setServerOptions({
     showAllHosts: true,
     showVersion: true

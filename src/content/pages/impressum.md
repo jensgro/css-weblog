@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
-permalink: /imprint.html
-title: Imprint
+permalink: /impressum.html
+title: Impressum
 headerImage: "875x250-grey.png"
 ---
 

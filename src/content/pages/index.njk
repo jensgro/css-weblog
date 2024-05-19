@@ -14,21 +14,14 @@ headerImage: "875x250-myred.png"
 
 {%- for item in categories %}
     <h2>{{ item.title }}</h2>
-    {% if "css-grid" in item.cat %}
-      {% for post in collections.grid %}
+    {% if "article" in item.cat %}
+      {% for post in collections.article %}
         {% if loop.first %}<ul>{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
     {% endif %}
 
-    {% if "flexbox" in item.cat %}
-      {% for post in collections.flexbox %}
-        {% if loop.first %}<ul>{% endif %}
-          {% include "partials/link-list-item.njk" %}
-        {% if loop.last %}</ul>{% endif %}
-      {% endfor %}
-    {% endif %}
 
     {% if "til" in item.cat %}
       {% for post in collections.til %}
@@ -38,13 +31,6 @@ headerImage: "875x250-myred.png"
       {% endfor %}
     {% endif %}
 
-    {% if "ideen" in item.cat %}
-      {% for post in collections.ideen %}
-        {% if loop.first %}<ul>{% endif %}
-          {% include "partials/link-list-item.njk" %}
-        {% if loop.last %}</ul>{% endif %}
-      {% endfor %}
-    {% endif %}
 
     {% if "codepen" in item.cat %}
       {% for post in collections.codepen %}

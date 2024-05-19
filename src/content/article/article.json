@@ -2,5 +2,5 @@
   "layout": "layouts/article.njk",
   "permalink": "css-grid/{{title | slugify}}.html",
   "bodyClass": "article",
-  "tags": "grid"
+  "tags": "article"
 }

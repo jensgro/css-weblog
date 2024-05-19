@@ -1,47 +1,28 @@
 ---
-title: Einführung in CSS-Grid
-lead: Seit ein paar Jahren gibt es mit Flexbox ein erstes, echtes Layoutmodul in CSS. Vorher behalfen wir uns mit Techniken, die für Seitenlayouts nur bedingt geeignet und nie gedacht waren. Mit CSS-Grids wurde kurz danach eine zweite Layouttechnik eingeführt, die von allen modernen Browsern unterstützt wird.
-headerImage: "875x250-myred.png"
+title: Einführung in CSS-Grid (Teil 2)
+lead: Nachdem wir uns die Grundidee angeschaut haben, wollen wir nun unser erstes eigenes Grid erstellen.
+date: 2024-05-02
+tags:
+    - css
+    - css-grid
+
 ---
-
-Ein "Grid" ist in der Gestaltung ein alter Hut und demnach auch in der Frontend-Entwicklung bekannt. Er bezeichnet die Verteilung von Inhalten nach einem unsichtbaren Raster (engl.: grid). Bisherige Raster sind grundsätzlich eindimensional ausgerichtet. In unserer westlichen Leserichtung sind die Gridspalten vertikal ausgerichtet. Viele Jahre haben wir - nachdem Layouttabellen endlich ausgestorben waren - diese Grids mit Floats realisiert. Die Umsetzung war manchmal hakelig, es gab einige störende Browser-Bugs. Deshalb waren generalisierte Lösungen beliebt. Die von Bootstrap ist sicherlich die bekannteste.
-
-<!-- {% figImg "css-grid/beispiel-grid.png", "Die vertikalen, grauen Balken stellen das Grid dar, das im Hintergrund existiert. Die Inhalte werden mittels Floats darauf platziert.", "Ein Layout wird von einem halbdurchsichtigen Grid überlagert." %} -->
-
-Floats waren niemals für Seitenlayouts vorgesehen. Sie werden nur mangels besserer Alternativen am Häufigsten genutzt. Alternativ kommen gelegentlich auch absolute Positionierung oder display: inline-block zum Einsatz. Als 2011 mit der Spezifikation von CSS-Grids begonnen wurde, hatten Webworker schon Erfahrungen mit teils komplizierten Layouts gemacht. Es waren auch Limitierungen der bislang verwendeten Techniken bekannt.
-
-## Andere Herangehensweise
-
-Wie schon bei Flexbox haben wir es bei CSS-Grids mit einer anderen als der gewohnten Herangehensweise und Benamung zu tun.
-
-Bislang waren wir es gewohnt, mit links, rechts, oben und unten zu arbeiten. Bei Flexbox wurde dieses Schema durch zwei Achsen ersetzt, die man in der Richtung drehen konnte. Die Namen der Achsen sind mit Haupt- und Kreuzachse neutral benannt.
-
-Grid hingegen macht Anleihen bei Tabellen. Wir sprechen hier von Reihen und Spalten. Eine Reihe oder auch eine Spalte, also der Bereich zwischen zwei Grid-Lines, wird auch als Grid-Track bezeichnet. Die kleinste Einheit, vergleichbar mit einer Tabellenzelle, ist die Grid-Cell. Und ein Bereich aus einer oder mehrerer Grid-Zellen, die zusammen von vier Grid-Lines begrenzt werden, ist eine Grid-Area. Ein Grid-Item ist immer Teil einer Grid-Area.
-
-{% figImg "css-grid/track-area-cell.png", "Die schwarzen Elemente symbolisieren die jeweiligen Begriffe.", "Screenshot einer Visualisierung der relevanten Grundbegriffe von CSS-Grids." %}
-
-Wie bei Flexbox ist es das Elternelement, das wesentliche Steuerungsaufgaben übernimmt. Die Kindelemente werden automatisch zu Grid-Items. Auch das ist eine Analogie zu Flexbox, wo die Kindelemente des Flex-Containers zu Flex-Items werden.
-
-Bei den CSS-Grids werden die einzelnen Layoutblöcke Grid-Items genannt. Der sie umgebende Container ist der Grid-Container. Das Grid wird durchzogen von Grid-Lines, also Linien, die die Grid-Items umgeben. Diese Linien werden mittlerweile in allen Devtools der Browser visualisiert. Pionier war hier Firefox, der sicherlich noch die besten Tools für Grid und Flexbox zu bieten hat.
-
-{% figImg "css-grid/grid-inspector-2.png", "Sie müssen im Grid-Inspector erst auswählen, für welchen Grid-Container der Inspector die Markierungen anzeigen soll.", "Screenshot des Grid-Inspectors der Firefox-Devtools." %}
-
-Man sieht in diesem Beispiel, dass die äußeren Enden des Grids immer mit Linien versehen sind. Es existieren deshalb immer eine Linie mehr als Reihen oder Spalten.
-
-## CSS-Grid oder Flexbox nutzen?
-
-Ein entscheidender Unterschied zwischen CSS-Grids und Flexbox ist, dass die Grids zweidimensional konstruiert sind. Eventuell macht die Spezifikation deshalb sprachliche Anleihen an Tabellen. Flexbox ist hingegen eindimensional. Um dies zu unterstreichen spricht die Spezifikation nur von Haupt- und Kreuzachse, nutzt also eine recht neutrale Sprache.
-
-Beide Techniken existieren gleichberechtigt nebeneinander und ergänzen unser bisheriges Toolset. Es ist deshalb immer die Herausforderung, für die jeweilige Layoutaufgabe das passende Tool zu wählen. Das kann mal die Flexbox, mal das Grid sein. Und in engen Grenzen gibt es immernoch Anwendungen für Floats. Die unterschiedlichen Formen der Positionierung hingegen werden sicherlich nie vollständig von anderen Techniken ersetzt werden können.
-
-Nur weil eine Technik neu ist, ist sie nicht per se nützlich und für alles zu gebrauchen.
 ## Ein Grid erstellen
 
 Wir erstellen ein Grid, in dem wir dem Elterncontainer ``display: grid;`` zuweisen. Die **direkten Kindelemente** dieses Grid-Containers werden dadurch automatisch zu Grid-Items. Es ist das gleiche Prinzip wie bei Flexbox. Es ist also auch bei dieser Layoutmethode wichtig, auf eine schlanke Struktur zu achten.
 
 Zusätzlich wird an dem Grid-Container die Art des Rasters bestimmt. Dies geschieht über die Definition der Breite und Anzahl der Spalten (``grid-template-columns``) und eventueller Zwischenräume (``gap`` bzw. ``row-gap``und ``column-gap``) definieren. Der Code für ein erstes Grid könnte folgendermassen aussehen:
 
-<figure class="card card--code">
+<figure class="card">
+    {% highlight "html" %}
+<div class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+</div>
+    {% endhighlight %}
+    
     {% highlight "css" %}
 .grid-container {
     display: grid;
@@ -49,14 +30,14 @@ Zusätzlich wird an dem Grid-Container die Art des Rasters bestimmt. Dies geschi
     gap: 20px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
-        <p>Ein einfacher Grid-Container entsteht. Den Code gibt es auf <a href="https://codepen.io/jensgro/full/mpVjGQ">Codepen</a>.</p>
+    <figcaption class="card-footer">
+        <p>Ein einfacher Grid-Container entsteht. Oben steht die Grundstruktur. In den ".grid-item"-Containern steht nachher Inhalt. Den Code gibt es auf <a href="https://codepen.io/jensgro/full/mpVjGQ">Codepen</a>.Den Code gibt es auf <a href="https://codepen.io/jensgro/full/mpVjGQ">Codepen</a>.</p>
     </figcaption>
 </figure>
 
  Durch `grid-template-columns` wird in diesem Beispiel ein vierspaltiges Layout definiert, dessen Spalten jeweils 100px breit sind. Mit jedem fünften Grid-Item wird eine neue visuelle Zeile eröffnet. Dafür müssen keine neuen Grid-Container erstellt werden. Sie werden erst dann notwendig, wenn sich die Art des Layouts ändert, also die Breiten und die Anzahl der Spalten. Um die Spalten nicht direkt aneinander kleben zu lassen, empfiehlt es sich, einen Abstand zwischen Spalten und Zeilen zu definieren. Mit ``row-gap`` und ``column-gap`` kann man diese Abstände explizit steuern. Einfacher ist es mit der Kurzschreibweise ``gap``. Wie bei ``padding``und ``margin`` kann mit dieser Kurzschreibweise sowohl ein Wert für beide Eigenschaften zugewiesen werden, als auch einfach ein wenig Tipparbeit gespart werden. Der erste Wert bezieht sich auf die Zeilen, der zweite auf die Spalten:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-container-1 {
     grid-gap: 20px;
@@ -65,7 +46,7 @@ Zusätzlich wird an dem Grid-Container die Art des Rasters bestimmt. Dies geschi
     grid-gap: 20px 10px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         <p>Zwei unterschiedliche Arten des Umgangs mit ``gap``.</p>
     </figcaption>
 </figure>
@@ -131,7 +112,7 @@ Die repeat-Syntax ist denkbar einfach: Innerhalb des Klammerausdrucks wird erst 
 
 So kann man mit sehr wenig Code das Bootstrap-Grid ([Codepen-Beispiel](https://codepen.io/jensgro/full/LeRPrK))  nachbauen:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-12col {
     display: grid;
@@ -139,13 +120,13 @@ So kann man mit sehr wenig Code das Bootstrap-Grid ([Codepen-Beispiel](https://c
     grid-gap: 10px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Bootstrap-Grid - Ausgangsposition
     </figcaption>
 </figure>
 
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-4-12 {
     display: grid;
@@ -153,7 +134,7 @@ So kann man mit sehr wenig Code das Bootstrap-Grid ([Codepen-Beispiel](https://c
     grid-gap: 10px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Vier gleich große Spalten
     </figcaption>
 </figure>
@@ -186,7 +167,7 @@ Die Fraction-Einheit funktioniert hier anders. Der Browser schaut erst, welche B
 
 Das Beispiel mit den Prozentwerten müsste man mittels ``calc()`` folgendermassen korrigieren:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-prozent-2 {
     grid-template-columns:
@@ -196,7 +177,7 @@ Das Beispiel mit den Prozentwerten müsste man mittels ``calc()`` folgendermasse
         calc(25% - 10px);
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Breitenkorrektur mit calc()
     </figcaption>
 </figure>
@@ -205,7 +186,7 @@ Diese Vorgehensweise ist umständlich, schlecht lesbar und fehleranfällig. Schl
 
 Selbstverständlich kann die Einheit ``fr`` mit anderen Einheiten vermischt werden. Es geht schließlich hierbei in gewisserweise um "[Resteverwertung](https://codepen.io/jensgro/full/vpKxNa)".
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-fr-1 {
     grid-template-columns: 100px 1fr 1fr 3fr;
@@ -217,7 +198,7 @@ Selbstverständlich kann die Einheit ``fr`` mit anderen Einheiten vermischt werd
     grid-template-columns: 1fr 30% 15rem 100px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Andere mögliche Breiten-Kombinationen
     </figcaption>
 </figure>
@@ -236,20 +217,20 @@ Für flexible, responsive Layouts kann es manchmal wichtig sein, eine minimale u
 
 Grids kann man auch in der Höhe flexibel begrenzen. [Im entsprechenden Codepen-Beispiel](https://codepen.io/jensgro/full/BJzwBj) ist einen Blindtext versteckt. Durch Klick auf den Button wird er angezeigt und wieder versteckt. Die zweite Zeile verändert dadurch ihre Höhe. Die Bedingungen dafür sind folgendermaßen gesetzt:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-minmax-2 {
     grid-template-rows: 150px minmax(80px, 2fr) 1fr 1fr;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         minimale und maximale Höhe
     </figcaption>
 </figure>
 
 In der Funktion ``minmax()`` darf die Einheit ``fr`` nur als Maximalwert, nicht als Minimalwert eingesetzt werden. Schließlich ist ``fr`` ein relativer Wert. Ein definitiver Minimalwert liesse sich damit nie erstellen. Zusätzlich gibt es noch die Schlüsselbegriffe ``auto``, ``min-content`` und ``max-content``. Mit ``min-content`` ist die Mindestbreite gemeint, die der Inhalt benötigt. Also bspw. eine Bildbreite oder das längste Wort in einem Text. Mit ``max-content`` ist dementsprechend das Maximum an für den Inhalt notwendigem Platz gemeint. Für den Maximalwert, also den zweiten Wert in der ``minmax()``-Funktion, sind ``max-content`` und ``auto`` identisch. So ergeben sich folgende Varianten:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-minmax-3 {
     grid-template-columns: 150px minmax(100px, auto) 1fr 1fr;
@@ -261,20 +242,22 @@ In der Funktion ``minmax()`` darf die Einheit ``fr`` nur als Maximalwert, nicht 
     grid-template-columns: 150px minmax(150px, max-content) 3fr 1fr;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Schlüsselbegriffe bei ``minmax()``
     </figcaption>
 </figure>
 
-{% aside %}
-Ausserhalb von CSS-Grid haben die Funktionen ``min()``, ``max()`` und ``clamp()`` mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen [Einführungsartikel](https://ishadeed.com/article/css-min-max-clamp/) geschrieben. In einem späteren Artikel kümmert er sich um [Anwendungsfälle](https://ishadeed.com/article/use-cases-css-comparison-functions/) dieser Funktionen.
-{% endaside %}
+<aside>
+<p>Ausserhalb von CSS-Grid haben die Funktionen <code>min()</code>, <code>max()</code> und <code>clamp()</code> mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen <a href="https://ishadeed.com/article/css-min-max-clamp/">Einführungsartikel</a> geschrieben. In einem späteren Artikel kümmert er sich um <a href="https://ishadeed.com/article/use-cases-css-comparison-functions/">Anwendungsfälle</a> dieser Funktionen.</p>
+
+<!-- Ausserhalb von CSS-Grid haben die Funktionen ``min()``, ``max()`` und ``clamp()`` mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen [Einführungsartikel](https://ishadeed.com/article/css-min-max-clamp/) geschrieben. In einem späteren Artikel kümmert er sich um [Anwendungsfälle](https://ishadeed.com/article/use-cases-css-comparison-functions/) dieser Funktionen. -->
+</aside>
 
 ## Autofit und Autofill
 
 Der erste Parameter der ``repeat()``-Funktion ist die Anzahl der Wiederholungen des darauffolgenden Breiten-Musters. Anstatt einen konkreten Wert einzugeben, kann man die Schlüsselworte ``auto-fit`` und ``auto-fill`` benutzen.
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-container-autofill {
     display: grid;
@@ -289,7 +272,7 @@ Der erste Parameter der ``repeat()``-Funktion ist die Anzahl der Wiederholungen 
     grid-gap: 10px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         auto-fill und auto-fit im Einsatz, mehr Beispiele bei [Codepen](https://codepen.io/jensgro/full/xpOvmW)
     </figcaption>
 </figure>
@@ -306,7 +289,7 @@ Auch bei ``auto-fit`` versucht der Browser, den Platz so gut es geht mit Grid-It
 
 Die einzelnen Zellen eines Grids können Webworker mit der Eigenschaft ``grid-template-areas`` benamen. Dabei können einfache Buchstaben genauso genommen werden wie ganze Wörter. Im folgenden Beispiel werden die Zellen eines 3x3-Rasters mit Namen versehen. Gleiche Namen sorgen dafür, dass die Zellen eine "Grid Area" bilden. Dabei müssen die Areas Rechtecke bilden. Die Eigenschaft ``grid-area`` ist nur die Kurzschreibform für ``grid-row-start``, ``grid-row-end`` bzw. ``grid-column-start`` und ``grid-column-end``. Die Orientierung hält sich also immer in einer visuellen Zeile oder Spalte. Deshalb ist es leider nicht möglich, ein Grid-Item in einer L-Form innerhalb eines Grids zu platzieren.
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-with-a-name {
     display: grid;
@@ -319,14 +302,14 @@ Die einzelnen Zellen eines Grids können Webworker mit der Eigenschaft ``grid-te
     "fuss fuss fuss";
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Benannte Bereiche (areas)
     </figcaption>
 </figure>
 
 Nachdem die Bereiche des Grids benannt worden sind, müssen diese noch mit Inhalten befüllt werden. Dazu können Sie Ihre Inhalte nun bequem anhand der Namen der Areas verteilen.
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .main-header {
     grid-area: kopf;
@@ -344,21 +327,21 @@ Nachdem die Bereiche des Grids benannt worden sind, müssen diese noch mit Inhal
     grid-area: fuss;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Den Inhalten die Grid-Areas zuweisen
     </figcaption>
 </figure>
 
 {% figImg "css-grid/grid-area-1.png", "Die Inhalte sind den passenden Grid-Areas zugewiesen." %}
 
-{% aside %}
+<aside>
 <p>Der interessante Nebeneffekt dieser Technik ist, dass die Darstellung unabhängig von der Codereihenfolge ist. Der Browser weiß schließlich, welche Container in welchen Bereich des Grids sollen. Dies ist besonders praktisch für <a href="https://codepen.io/jensgro/full/GyjpMM">unterschiedliche Breakpoints einer responsiven Seite</a>. Zu lässig sollte man aber mit dieser Technik nicht umgehen. Denn wie bei der Flexbox-Eigenschaft <code>order</code> steht die große visuelle Kontrolle im Konflikt mit der Usability und Accessibility. Seitenbereiche, die ich visuell an anderer Stelle darstelle, als sie nach der Codereihenfolge sein sollten, sollten keine interaktiven Elemente besitzen, die mit der Tastatur fokussiert werden können. Genauer: es sollten sich keine Buttons, Links, Formularelemente darin befinden. Die Tabreihenfolge richtet sich nach der Codereihenfolge, nicht nach der visuellen.</p>
 <p>Deshalb sind solche Umschichtungen in meinen Augen nur dann sinnvoll, wenn sie auf einer rein mobilen Darstellung angewendet werden. Auf dem Smartphone tabbe ich nicht nicht durch die Gegend.</p>
-{% endaside %}
+</aside>
 
 Die Anzahl der Namen mit der Anzahl der zur Verfügung stehenden Grid-Items pro visueller Zeile übereinstimmen muss. Eventuell gewünschte Auslassungen werden mit einem Punkt realisiert:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .grid-with-a-name-2 {
     grid-template-columns: 1fr 3fr 1fr;
@@ -368,7 +351,7 @@ Die Anzahl der Namen mit der Anzahl der zur Verfügung stehenden Grid-Items pro 
                 "fuss fuss .";
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Auslassung einer Zelle
     </figcaption>
 </figure>
@@ -401,58 +384,6 @@ Der dahinter stehende Code ist gekürzt folgender:
 
 Der Autor markiert die Auslassungen in diesem Beispiel mit zwei Punkten. Auf diese Weise können Sie sehr einfach einen Container über mehrere Spalten und Zeilen verteilen sowie mit Auslassungen gestalten. Auslassungen werden mit mindestens einem Punkt gekennzeichnet. Wenn Sie aus optischen Gründen mehrere Punkte nutzen möchten, können Sie dies tun, solange kein Lerraum zwischen den Punkten ist. Ein Leerschritt würde den Übergang in eine neue Zelle markieren.
 
-## Browser-Support
-
-Im ersten Halbjahr 2022 wurde der Support für den IE11 eingestellt. Aus Frontendentwickler-Sicht ist dieser Browser tot. Deshalb gibt es keinen Grund mehr, sich nicht intensiv mit allen Facetten von CSS-Grid auseinanderzusetzen. Alle modernen Browser beherrschen alle Aspekte dieser Technik.
-
-{% details "IE10 und IE11" %}
-
-IE10 und IE11 - die wie bei Flexbox die ersten Browser waren, die CSS-Grids unterstützen - hatten ein paar Lücken in der Implementierung. Man kann in diesen alten Browsern Grid nutzen, aber nicht alle Features. Vor allem Grid-Areas werden in diesen alten Schlachtschiffen nicht unterstützt. Alle anderen Eigenschaften haben ein „-ms-“-Prefix. Manche werden komplett anders geschrieben. Da der IE wenn nicht tot, so doch fast tot ist, lohnt es sich nicht, zuviel Energie in das Lernen der spezifischen Unterschiede zu stecken. Schon gar nicht sollte man alle Unterschieden manuell pflegen. Das beliebte Tool [Autoprefixer](https://goo.gl/TLpWr8) hilft. Die CSS-Grids müssen allerdings in der Konfiguration aktiviert werden:
-
-````
-autoprefixer({ grid: true })
-````
-
-Doch mit Autoprefixer allein ist uns beim Umgang mit dem IE nicht geholfen. Rachel Andrew führt [in einer Tabelle](https://goo.gl/RGDTLj) alle Grid-Eigenschaften und ihre möglichen IE-spezifischen Pendants auf. Dabei fällt auf, dass viele aktuelle Eigenschaften keine Entsprechung in der alten Version haben und andere wiederum so gelöst werden, dass Autoprefixer leider keine Hilfe ist.
-
-Bei einem einfachen Grid-Layout ist die Chance hoch, es auch für den IE zum Laufen zu bekommen. Doch alle Theorie verblasst vor einem Blick in die eigene Statistik. Wenn der IE nur noch in Spurenelementen dort auftaucht, lohnt sich kein Beschäftigung mit dem Autoprefixer und manueller Nacharbeit.
-
-CSS-Grid ist die Zukunft des Layouts und für manchen schon die Gegenwart.
-
-{% enddetails %}
-
-### Progressive Enhancement
-
-Bei neuen Projekten spricht nichts dagegen, gleich mit CSS-Grid (und Flexbox) loszulegen. Es sei denn, das konkrete Projekt hat zuviele Zugriffe von alten und sehr alten Browsern. Insbesondere bei Intranetprojekten und internen Tools kommen solche beschränkenden Anforderungen immernoch vor.
-
-Trotzdem muss man nicht auf moderne Techniken verzichten. Man kann moderne Techniken auch zu den alten, bewährten Techniken hinzufügen. Da es keinen Polyfill für CSS-Grids gibt und wird wohl auch nie einen geben wird, kommt das gute, alte "progressive Enhancement" als Strategie wieder zum Zuge.
-
-Ziel solte dabei nicht sein, optisch das gleiche Ergebnis für alte Browser zu servieren. Im Geiste von Progressive Enhancement oder Graceful Degredation kann man entweder auf eine bestehende Layoutlösung die neue Technik draufsetzen, um für moderne Browser eine leicht andere Experience zu schaffen. Oder man entwickelt eine schlichte Seite, die für moderne Browser dann mittels CSS-Grids aufgewertet wird. Das Gute an CSS ist ja, dass Browser ihnen unbekannte Eigenschaften einfach ignorieren, anstatt die Verarbeitung wie bei JavaScript mit einem Fehler abzubrechen.
-
-Bei der Verwendung neuet Techniken wie CSS-Grid oder auch Flexbox ignorieren die modernen Browser mögliche alte Lösungen wie Floats, ``display: table-cell`` oder ``display: inline-block`` einfach. Man kann also schlicht [ein bestehendes Layout mit CSS-Grids erweitern](https://codepen.io/jensgro/full/JMRwBO). Weder eine Änderung in der Codereihenfolge (die Kaskade) noch eine Erhöhung der Spezifität ändert etwas daran, dass der CSS-Grid-fähige Browser die Floats ignoriert.
-
-### Feature Queries
-
-Egal ob die Erweiterung eines alten Projektes oder die Erstellung eines neuen Projektes ansteht, wenn alte und moderne Browser gleichermassen gut behandelt werden sollen, lohnt sich eine Beschäftigung mit [Feature Queries](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/). Sie helfen, eine klare Trennlinie zu ziehen. Und sie machen eine Nutzung des Autoprefixers überflüssig.
-
-Analog zu Media Queries, die einige Umgebungsvariablen des Browsers abfragt, gibt es [Feature Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports). Hier kann man den Browser "fragen", ob eine bestimmte Eigenschaft mit einer konkreten Ausprägung unterstützt wird. Erst bei positiver Beantwortung der Bedingung wird der umklammerte Code ausgeführt.
-
-Im Falle von CSS-Grid ist sehr hilfreich, dass kein IE Feature Queries je beherrscht hat. Jeglicher Code innerhalb von Feature Queries ist also vor dem IE10 und IE11 versteckt:
-
-{% highlight "css" %}
-.container {
-/* Regeln bspw. für eine Floatumgebung für alte Browser */
-}
-@supports(display: grid) {
-    /* Regeln für moderne Browser */
-    .container{
-        display: grid;
-    }
-/* Und viele weitere Regeln ... */
-}
-{% endhighlight  %}
-
-Durch Feature Queries bekommt man eine saubere Trennung von Code für alte und moderne Browser. Nach ein paar Jahren kann man dann den Legacy-Code komplett entfernen und die Feature Queries ebenso. Zurück bliebe moderner Code.
 
 ## Zweidimensional
 
@@ -460,7 +391,7 @@ Nachdem wir einen kleinen Einblick in die mächtige Technik der CSS-Grids bekomm
 
 Der große Unterschied von CSS-Grids zu Floats und dem ebenfalls recht neuen Flexbox ist, dass CSS-Grids zwei-dimensional agieren können. Floats funktionieren nur horizontal, Flexbox nur horizontal oder vertikal. Bei den CSS-Grids können die Grid-Items horizontal und vertikal verteilt werden:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "css" %}
 .container{
     display: grid;
@@ -472,7 +403,7 @@ Der große Unterschied von CSS-Grids zu Floats und dem ebenfalls recht neuen Fle
     grid-gap: 60px;
 }
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Zwei-Dimensionale Verteilung mit CSS-Grids
     </figcaption>
 </figure>
@@ -491,7 +422,7 @@ Man kann dafür sorgen, dass Flex-Items, die nicht mehr in eine visuelle Zeile p
 
 Durch die Hinzugabe der Eigenschaft ``flex-direction: column;`` würden die Flex-Items des obigen Beispiels nicht mehr horizontal, sondern vertikal laufen. Man muss zwischen beiden Optionen wählen. Bei CSS-Grids muss man dies nicht. Man kann die einen Elemente horizontal, die anderen vertikal ausrichten. Und dafür benötigen wir zudem weniger HTML. Denn da Flexbox nur in eine Richtung funktioniert, benötigen wir zur Kombination beider Richtungen einen extra Wrapper, wie ich an einem [einfach gehaltenen Layoutbeispiel](https://codepen.io/jensgro/full/GQgMdo) demonstriere. In der [CSS-Grid-Variante](https://codepen.io/jensgro/full/jZEaQJ) wird der Wrapper nicht benötigt. Die grobe Struktur beider Varianten sieht folgendermaßen aus:
 
-<figure class="card card--code">
+<figure class="card">
     {% highlight "html" %}
 <!-- Die Flexbox-Variante -->
 <div class="container">
@@ -510,7 +441,7 @@ Durch die Hinzugabe der Eigenschaft ``flex-direction: column;`` würden die Flex
     <footer class="page-footer"> </footer>
 </div>
     {% endhighlight %}
-    <figcaption class="card__footer">
+    <figcaption class="card-footer">
         Struktur einer einfachen Seite im Vergleich: Flexbox und CSS-Grid
     </figcaption>
 </figure>
@@ -521,7 +452,8 @@ Wir sollten allerdings die alten, traditionellen Techniken nicht vergessen. Sie 
 
 Es ist zudem ein Irrtum, dass CSS-Grids alle anderen Techniken ersetzen. Jede Technik hat ihre Berechtigung, ihre Vor- und Nachteile. CSS-Grids füllen eine Lücke, die vorher nur mit Müh und Not mit Hilfe von dazu nicht primär nicht gedachten Techniken gestopft wurde. Grids können in sehr vielen Situationen ihre Stärken ausspielen.
 
-{% aside %}
+<aside>
+
 ## Informationsquellen
 
 CSS-Grids sind eine umfangreiche und teilweise kompliziert zu erfassende Technik. Vertiefende und erweiternde Informationen gibt es an vielen Ecken des Internets, sowohl als einzelne Artikel, komplette Infoseiten und als Videotutorials unterschiedlicher Komplexität.
@@ -535,8 +467,8 @@ Bei CSS-Tricks gibt es den [A Complete Guide to CSS Grid](https://css-tricks.com
 Oder sind ein paar Videotutorials gefällig? Dann sind die 25 Lektionen von Wes Bos sicher eine gute Empfehlung. Der Kanadier hat – von Mozilla finanziert – seinen [kostenlosen und umfangreichen Kurs](https://cssgrid.io) Anfang 2018 veröffentlicht. Inhaltlich kann daran aber kein Vergang sein. Konkrete praktische Fragen geht Jen Simmons in ihrer Videocast-Serie [Layoutland](https://goo.gl/Bw5DAq) auf Youtube an.
 
 [Griddy](https://griddy.io/) ist ein Online-Tool, mit dem man sich ein Grid zusammenklicken kann. Natürlich mit Codeausgabe. Spielerisch kann man sich dem Thema im [Grid Garden](http://cssgridgarden.com/#de) nähern.
-{% endaside %}
+</aside>
 
 ## Fazit
 
-Endlich gibt es eine ausgefeilte Technik für Seitenlayouts. Und da der IE mittlerweile tot ist, müssen wir uns auch nicht mehr in der Verwendung zurückhalten. Im Gegensatz zu früher haben wir keine unterschiedlichen Versionen mit Vendor-Prefixes wie ``-webkit-`` und ``-moz-``. Glücklicherweise ist die neue Technik so in alle modernen Browser integriert, dass sie alte Layoutlösungen einfach überschreibt. Man kann also ältere Projekte sukzessive moderniesieren und behält einen Fallback immer bei. Viel Spaß bei der Gestaltung der Zukunft!
+Endlich gibt es eine ausgefeilte Technik für Seitenlayouts. Und da der IE mittlerweile tot ist, müssen wir uns auch nicht mehr in der Verwendung zurückhalten. Im Gegensatz zu früher haben wir keine unterschiedlichen Versionen mit Vendor-Prefixes wie ``-webkit-`` und ``-moz-``. Glücklicherweise ist die neue Technik so in alle modernen Browser integriert, dass sie alte Layoutlösungen einfach überschreibt. Man kann also ältere Projekte sukzessive modernisieren und behält einen Fallback immer bei. Viel Spaß bei der Gestaltung der Zukunft!

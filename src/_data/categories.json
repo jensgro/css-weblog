@@ -1,8 +1,5 @@
 [
-  { "title": "CSS-Grid", "cat": "css-grid"},
-  { "title": "Flexbox", "cat": "flexbox"},
-  { "title": "Linktipps", "cat": "linktipps"},
+  { "title": "Artikel", "cat": "article"},
   { "title": "TIL", "cat": "til"},
-  { "title": "Ideen", "cat": "ideen"},
   { "title": "Meine Codepen", "cat": "codepen"}
 ]

@@ -1,6 +1,0 @@
-{
-  "layout": "layouts/article.njk",
-  "permalink": "flexbox/{{title | slugify}}.html",
-  "bodyClass": "article",
-  "tags": "flexbox"
-}
