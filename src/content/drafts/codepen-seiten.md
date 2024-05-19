@@ -1135,7 +1135,6 @@ a => `* [${a.innerText}](${a.href.replace(/\?utm.*$/,'')})`
 * [simple teaser](https://codepen.io/jensgro/pen/vEgYdr/ac6dee7ad4871fa222af20eb1c448c50)
 * [simple teaser](https://codepen.io/jensgro/pen/jEyOLg/cae858285ee3efe7349a19b932028cc5)
 * [simple teaser](https://codepen.io/jensgro/pen/gbgOxd/ba5626f7477513105c4df815dc2c71db)
-* [flexbox-mixin](https://codepen.io/jensgro/pen/bNgGwO/1444a91e9dd0a08ee6ab65c0633b5861)
 * [Demo Flexbox 2](https://codepen.io/jensgro/pen/RNomgo)
 * [Switching headlines with Flexbox](https://codepen.io/jensgro/pen/GgNeVL)
 

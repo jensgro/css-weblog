@@ -3,3 +3,11 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
+.codepen-list-wrapper {
+  margin-block: 40px;
+}
+.codepenlist {
+  columns: 2;
+  column-gap: 20px;
+}
