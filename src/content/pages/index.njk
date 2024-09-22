@@ -16,7 +16,7 @@ headerImage: "875x250-myred.png"
     <h2>{{ item.title }}</h2>
     {% if "article" in item.cat %}
       {% for post in collections.article %}
-        {% if loop.first %}<ul>{% endif %}
+        {% if loop.first %}<ul class="index-list">{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
@@ -25,8 +25,12 @@ headerImage: "875x250-myred.png"
 
     {% if "til" in item.cat %}
       {% for post in collections.til %}
-        {% if loop.first %}<ul>{% endif %}
-          {% include "partials/link-list-item.njk" %}
+          {% set tagUrl %}/{{ tag }}/{% endset %}
+        {% if loop.first %}<ul class="index-list">{% endif %}
+          <li>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+
+          </li>
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
     {% endif %}
@@ -34,7 +38,7 @@ headerImage: "875x250-myred.png"
 
     {% if "codepen" in item.cat %}
       {% for post in collections.codepen %}
-        {% if loop.first %}<ul>{% endif %}
+        {% if loop.first %}<ul class="index-list">{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
@@ -42,7 +46,7 @@ headerImage: "875x250-myred.png"
 
     {% if "linktipps" in item.cat %}
       {% for post in collections.linktipps %}
-        {% if loop.first %}<ul>{% endif %}
+        {% if loop.first %}<ul class="index-list">{% endif %}
           {% include "partials/link-list-item.njk" %}
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
