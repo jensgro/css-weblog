@@ -1,0 +1,17 @@
+---
+layout: layouts/post.njk
+permalink: /codepen.html
+bodyClass: codepen
+eleventyNavigation:
+  key: codepen
+  order: 2
+
+title: "My Codepen"
+headerImage: "875x250-green.png"
+---
+
+<ul>
+  {%- for p in collections.codepen %}
+    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
