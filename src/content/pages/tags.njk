@@ -1,0 +1,34 @@
+---
+title: "Archive"
+headerImage: "875x250-blue.png"
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: archive
+  order: 3
+permalink: /tags/{{ tag }}/
+layout: layouts/home.njk
+bodyClass: tag
+
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+    - codepen
+    - article
+    - til
+  addAllPagesToCollections: true
+renderData:
+  title: Kategorie "{{ tag }}"
+
+---
+
+
+{% set postslist = collections[ tag ] %}
+{% include "partials/tagslist.njk" %}
+
