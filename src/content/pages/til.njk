@@ -1,0 +1,17 @@
+---
+layout: layouts/post.njk
+permalink: /til.html
+bodyClass: til
+eleventyNavigation:
+  key: til
+  order: 1
+
+title: "TIL (Things I Learned)"
+headerImage: "875x250-green.png"
+---
+
+<ul>
+  {%- for p in collections.til %}
+    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
