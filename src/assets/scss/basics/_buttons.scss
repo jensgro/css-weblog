@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 $btn-vars: (
   btn-primary-text-color: #{get-color("black")},
   btn-secondary-text-color: #{get-color("grey", dark)},

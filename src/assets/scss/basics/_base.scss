@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 // The custom properties for :root
 $root-vars: (
   textColor: #{get-color("black")},

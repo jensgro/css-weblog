@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 .card {
   margin: $space4 0;
   display: flex;

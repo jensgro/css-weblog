@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 $nav-vars: (
   mainNavBgCol: #{get-color("grey", dark)},
   mainNavItemText: #{get-color("black")},

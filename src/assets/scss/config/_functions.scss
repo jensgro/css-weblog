@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables" as *;
 
 // calculating rem but writing pixels
 // usage without changing the base-fontsize

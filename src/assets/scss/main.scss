@@ -1,19 +1,5 @@
 @use "sass:math";
-@import "functions";
-@import "mixins";
-@import "variables";
-
-@import "fonts";
-@import "base";
-@import "layout";
-@import "main-nav";
-@import "site-header";
-@import "card";
-@import "aside";
-@import "utilities";
-@import "buttons";
-@import "youtube";
-@import "site-footer";
-@import "prism-2";
-@import "codepen";
+@use "config";
+@use "basics";
+@use "modules";
 
