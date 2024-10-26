@@ -1,13 +1,12 @@
 <header class="main-nav no-print">
   <nav class="container">
     {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+
+    {% set navPages = collections.all | eleventyNavigation %}
     <ul class="main-nav__nav">
-    {%- for entry in collections.all | eleventyNavigation %}
-      <li class="main-nav__item">
-        <a  class="main-nav__link{% if entry.url == page.url or entry.key == category %} main-nav__link--active{% endif %}"
-            href="{{ entry.url | url }}">
-            {{ entry.title }}
-        </a>
+    {%- for entry in navPages %}
+      <li  class="main-nav__item">
+        <a  class="main-nav__link{% if entry.url == page.url or entry.key == category %} main-nav__link--active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}</a>
       </li>
     {%- endfor %}
     </ul>

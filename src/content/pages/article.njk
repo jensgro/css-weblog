@@ -1,0 +1,17 @@
+---
+layout: layouts/post.njk
+permalink: /article.html
+bodyClass: article
+eleventyNavigation:
+  key: article
+  order: 4
+
+title: "My Articles"
+headerImage: "875x250-green.png"
+---
+
+<ul>
+  {%- for p in collections.article %}
+    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
