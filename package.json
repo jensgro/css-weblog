@@ -7,7 +7,7 @@
     "build:eleventy": "eleventy",
     "clean": "rimraf _site",
     "serve:eleventy": "eleventy --serve",
-    "serve:sass": "sass src/assets/scss/main.scss:_site/assets/css/styles.css",
+    "serve:sass": "sass src/assets/scss/main.scss:_site/assets/css/main.css",
     "watch:eleventy": "eleventy --watch",
     "watch:sass": "sass --watch src/assets/scss/main.scss:_site/assets/css/main.css",
     "build": "cross-env NODE_ENV=production npm-run-all build:*",
