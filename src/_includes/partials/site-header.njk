@@ -2,15 +2,15 @@
 <div class="bg-wrapper">
 {% endif %}
   <div class="container{%if headerClass%} headerClass{% endif %}">
-    <header class="siteheader">
+    <header class="site-header">
       <!-- 7:2 -->
       {%- if headerImage -%}
      <img class="no-print" src="/assets/img/{{headerImage}}" alt="" width="875" height="250">
      {%- endif -%}
-     <div class="siteheader__headline-cnt">
-        <h1 class="siteheader__headline">{{ title }}</h1>
+     <div class="site-header__headline-cnt">
+        <h1 class="site-header__headline">{{ title }}</h1>
         {% if subline %}
-        <p class="siteheader__subline">{{ subline }}</p>
+        <p class="site-header__subline">{{ subline }}</p>
         {% endif %}
      </div>
     </header>

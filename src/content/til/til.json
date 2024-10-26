@@ -2,5 +2,6 @@
   "layout": "layouts/post.njk",
   "permalink": "til/{{title | slugify}}.html",
   "bodyClass": "til",
+  "headerClass": "til",
   "tags": "til"
 }

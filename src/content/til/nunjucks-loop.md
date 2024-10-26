@@ -1,10 +1,10 @@
 ---
-title: Einen Teil eines Loops durchlaufen
-tags: 
+title: Einen Teil eines Nunjucks-Loops durchlaufen
+tags:
     - nunjucks
     - template
     - 11ty
-source: 
+source:
     - "http://mozilla.github.io/nunjucks/templating.html#for"
 
 ---
@@ -13,8 +13,8 @@ source:
 
 {% raw %}{% for images in index %}{% endraw %}
 {% raw %}{% if (loop.index <= 5) %}{% endraw %}
-    <div class="spacer col-md-2 col-sm-6"> 
-    
+    <div class="spacer col-md-2 col-sm-6">
+
     </div>
     <div class="yellp-img col-md-2 col-sm-6">
         <img src="/uploads/images/{{ images.image.filename }}" />
@@ -24,7 +24,7 @@ source:
 
 {% endhighlight %}
 
-Inside loops, you have access to a few special variables:
+Innerhalb der Loops haben wir Zugriff auf diese Variablen:
 
 - `loop.index`: the current iteration of the loop (1 indexed)
 - `loop.index0`: the current iteration of the loop (0 indexed)

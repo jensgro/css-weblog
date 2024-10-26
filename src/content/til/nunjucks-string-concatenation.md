@@ -1,13 +1,30 @@
 ---
-title: String concatenation in Nunjucks
-tags: 
+title: Strings in Nunjucks zusammenfassen
+tags:
     - nunjucks
     - template
     - 11ty
-source: 
+sources:
     - https://github.com/11ty/eleventy/issues/297
     - https://michaelheap.com/nunjucks-concatenate-string/
 ---
+
+Michael Heap [beschreibt](https://michaelheap.com/nunjucks-concatenate-string/), wie er in Nunjucks Strings zusammenfasst. Er setzt dafür eine Variable und fasst deren Bestandteile mit ``join`` zusammen:
+
+````jsx
+{% set url = ["/bits/", data.slug] | join %}
+````
+
+
+{% highlight "js" %}
+{% raw %}
+
+{% set url = ["/bits/", data.slug] | join %}
+
+{% endraw %}
+{% endhighlight %}
+
+
 
 I think you want to use set to set a variable.
 
