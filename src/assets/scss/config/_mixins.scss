@@ -1,4 +1,7 @@
 @use "variables" as *;
+@use "sass:string";
+@use "sass:map";
+@use "sass:meta";
 
 @mixin nolist {
   list-style: none;
@@ -23,17 +26,17 @@
 // https://gist.github.com/lewismcarey/de2a70fe93ab235ba103
 @function get-color( $color, $shade: 'base', $map : $custom-colors ){
   // check color exists
-  @if (map-has-key($map, $color)) {
-    $value: map-get($map, unquote($color));
+  @if (map.has-key($map, $color)) {
+    $value: map.get($map, string.unquote($color));
     // check if color or map
-    @if type-of($value) == color {
+    @if meta.type-of($value) == color {
       // return color
       @return $value;
     }
     // check shade of color exists
-    @if (map-has-key($value, $shade)) {
+    @if (map.has-key($value, $shade)) {
       // return shade of color
-      @return map-get($value, $shade);
+      @return map.get($value, $shade);
     }
   }
   // else do nothing

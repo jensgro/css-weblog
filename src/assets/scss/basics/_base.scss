@@ -1,19 +1,20 @@
 @use "../config" as *;
+@use "sass:color";
 
 // The custom properties for :root
 $root-vars: (
   text-color: #{get-color("black")},
   page-bg-color: #{get-color("white")},
-  linkColor: #{get-color("red", my)},
-  linkColorHover: #{lighten(get-color("red", my), 10%)},
-  site-footer-bg: #{get-color("red", my)},
+  linkColor: #{get-color("red", "my")},
+  linkColorHover: #{color.adjust(get-color("red", "my"),$lightness: 10%)},
+  site-footer-bg: #{get-color("red", "my")},
   site-footer-color: #{get-color("white")},
-  site-footer-border-top-color: #{get-color(blue, medium)},
-  code-bg: #{get-color("brown", medium)},
-  aside-bg: #{get-color("grey", light)},
+  site-footer-border-top-color: #{get-color("blue", "medium")},
+  code-bg: #{get-color("brown", "medium")},
+  aside-bg: #{get-color("grey", "light")},
   aside-after-bg: #{get-color("grey")},
   card-img-border-color: #{get-color("grey")},
-  details-border-color: #{get-color("grey", darker)}
+  details-border-color: #{get-color("grey", "darker")}
 );
 
 @include cssvars($root-vars);
