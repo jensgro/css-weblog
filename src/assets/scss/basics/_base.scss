@@ -170,12 +170,18 @@ h5 {font-size: rem(20);}
 	inline-size: 5rem;
 }
 
-p code {
+p code, li code {
   display: inline-block;
-  padding: 0.01em 0.4em;
+  padding: 0.001em 0.4em;
   font-family: $systemfonts-mono;
   background: var(--code-bg);
   border-radius: 8px;
+}
+li code {
+  margin-right: $space05;
+}
+li:has( code ) {
+  margin-bottom: $space05;
 }
 
 /* ==== details/summary ==== */

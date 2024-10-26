@@ -1,7 +1,6 @@
-<!-- Kommt an! -->
 {% if source %}
 <figure class="source">
-  <p>Quelle: {{source}}</p>
+  <p>Quelle: <a href="{{ source | url }}">{{source}}</a></p>
 </figure>
 {% endif %}
 

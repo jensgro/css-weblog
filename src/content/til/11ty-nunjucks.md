@@ -15,6 +15,7 @@ Wenn man in einer Nunjucks-Seite anstelle des Links zum Template im Frontmatter 
 {% raw %}
 {% extends 'template.njk' %}
 {% endraw %}
+
 ```
 
 Dann kann man auch zwei oder mehr Contentblöcke in einer Seite nutzen:

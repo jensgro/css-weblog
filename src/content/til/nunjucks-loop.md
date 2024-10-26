@@ -8,6 +8,7 @@ source:
     - "http://mozilla.github.io/nunjucks/templating.html#for"
 
 ---
+Manchmal möchte man nicht alle Ergebnisse einer collection in 11ty zeigen, sondern nur einen Teil. Beispielsweise auf Übersichtsseiten, auf der eventuell nur fünf ausgewählte Einträge gezeigt werden sollen. Das ist ganz einfach möglich:
 
 {% highlight "js" %}
 
@@ -26,11 +27,11 @@ source:
 
 Innerhalb der Loops haben wir Zugriff auf diese Variablen:
 
-- `loop.index`: the current iteration of the loop (1 indexed)
-- `loop.index0`: the current iteration of the loop (0 indexed)
-- `loop.revindex`: number of iterations until the end (1 indexed)
-- `loop.revindex0`: number of iterations until the end (0 based)
-- `loop.first`: boolean indicating the first iteration
-- `loop.last`: boolean indicating the last iteration
-- `loop.length`: total number of items
+- ``loop.index``: die aktuelle Iteration der Schleife, beginnend bei 1
+- ``loop.index0``: die aktuelle Iteration der Schleife, beginnend bei 0
+- ``loop.revindex``: Anzahl der Iterationen bis zum Ende der Schleife, beginnend bei 1
+- ``loop.revindex0``: Anzahl der Iterationen bis zum Ende der Schleife, beginnend bei 0
+- ``loop.first``: Boolean, zeigt die erste Iteration
+- ``loop.last``: Boolean, zeigt die letzte Iteration
+- ``loop.length``: Die absolute Anzahl der Items
 
