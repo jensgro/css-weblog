@@ -1,5 +1,13 @@
 @use "../config" as *;
 
+$site-footer-vars: (
+  site-footer-bg: #{get-color("red", "my")},
+  site-footer-color: #{get-color("white")},
+  site-footer-border-top-color: #{get-color("blue", "medium")},
+);
+
+@include cssvars($site-footer-vars, ".site-footer");
+
 .site-footer {
   border-top: 2px solid var(--site-footer-border-top-color);
   padding: $space2 0;

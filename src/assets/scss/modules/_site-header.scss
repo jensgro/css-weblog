@@ -23,13 +23,13 @@
 }
 
 .site-header:has(> img) {
-  --headline-bgcolor: rgba(0,0,0,0.125);
-  --headline-color: #fff;
+  --site-header-bgcolor: rgba(0,0,0,0.125);
+  --site-header-color: #{get-color("white")};
   aspect-ratio: 7 / 2;
 
   .site-header__headline-cnt {
-    color: var(--headline-color);
-    background-color: var(--headline-bgcolor);
+    color: var(--site-header-color);
+    background-color: var(--site-header-bgcolor);
 
     @media (min-width: $md) {
       position: absolute;
