@@ -35,15 +35,6 @@ headerImage: "875x250-myred.png"
       {% endfor %}
     {% endif %}
 
-
-    {% if "codepen" in item.cat %}
-      {% for post in collections.codepen %}
-        {% if loop.first %}<ul class="index-list">{% endif %}
-          {% include "partials/link-list-item.njk" %}
-        {% if loop.last %}</ul>{% endif %}
-      {% endfor %}
-    {% endif %}
-
     {% if "linktipps" in item.cat %}
       {% for post in collections.linktipps %}
         {% if loop.first %}<ul class="index-list">{% endif %}

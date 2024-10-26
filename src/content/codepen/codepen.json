@@ -1,6 +1,0 @@
-{
-
-  "permalink": "codepen/{{title | slugify}}.html",
-  "bodyClass": "codepen",
-  "tags": "codepen"
-}
