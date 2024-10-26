@@ -6,16 +6,17 @@ $site-footer-vars: (
   site-footer-border-top-color: #{get-color("blue", "medium")},
 );
 
-@include cssvars($site-footer-vars, ".site-footer");
+@include cssvars($site-footer-vars, ".site-footer-wrapper");
 
 .site-footer {
-  border-top: 2px solid var(--site-footer-border-top-color);
-  padding: $space2 0;
+  //border-top: 2px solid var(--site-footer-border-top-color);
+  //padding: $space2 0;
 
   &__list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-block: 0;
 
     .getback__link {
       margin-left: 0;
@@ -48,7 +49,9 @@ $site-footer-vars: (
     justify-content: flex-end;
   }
 }
+
 .site-footer-wrapper {
   color: var(--site-footer-color);
   background-color: var(--site-footer-bg);
+  padding: $space1;
 }

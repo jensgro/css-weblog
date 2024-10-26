@@ -1,11 +1,11 @@
 @use "../config" as *;
 
 $nav-vars: (
-  main-nav-bg-color: #{get-color("grey", dark)},
+  main-nav-bg-color: #{get-color("red", "my")},
   main-nav-item-text: #{get-color("black")},
   main-nav-item-bg-color: #{get-color("white")},
   main-nav-inactive-hover-bg: #{get-color("grey")},
-  active-nav-bg-color: #{get-color("red", my)},
+  active-nav-bg-color: #{get-color("black")},
   active-nav-text-color: #{get-color("white")},
 );
 @include cssvars($nav-vars, ".main-nav");
@@ -36,7 +36,7 @@ $nav-vars: (
     display: inline-block;
     color: currentColor;
     text-decoration: none;
-    padding: $space1;
+    padding: $space1 $space4;
 
     &:hover,
     &:focus {

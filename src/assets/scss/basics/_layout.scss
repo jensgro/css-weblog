@@ -1,5 +1,13 @@
 @use "../config" as *;
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+.site-footer-wrapper {
+  margin-top: auto;
+}
+
 .container {
   --container-bgcolor: get-color("white");
 
@@ -8,6 +16,7 @@
   margin: 0 $space2;
 
   @media (min-width: $lg) {
+    width: 100%;
     max-width: $maxwidth;
     margin: 0 auto;
   }
