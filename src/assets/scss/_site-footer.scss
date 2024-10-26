@@ -1,4 +1,4 @@
-.sitefooter {
+.site-footer {
   --borderTopColor: #{get-color(blue, medium)};
 
   border-top: 2px solid var(--borderTopColor);
@@ -30,10 +30,17 @@
       margin-left: 0;
     }
   }
+  a {
+    color: inherit;
+  }
 }
 
 .sitefooter.sitefooter--home {
   .sitefooter__list {
     justify-content: flex-end;
   }
+}
+.site-footer-wrapper {
+  color: var(--site-footer-color);
+  background-color: var(--site-footer-bg);
 }

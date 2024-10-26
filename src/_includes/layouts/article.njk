@@ -3,11 +3,14 @@
 {% include "partials/page-header.njk" %}
 {% include "partials/navigation.njk" %}
 {% include "partials/site-header.njk" %}
+
 <div class="container">
   <main class="post-cnt">
     {{ content | safe }}
   </main>
 </div>
+
 {% include "partials/footer.njk" %}
+{# youtube if activated in yaml  #}
 {% include "partials/youtube-script.njk" %}
 {% include "partials/end.njk" %}

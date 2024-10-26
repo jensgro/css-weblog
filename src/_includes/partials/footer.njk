@@ -1,20 +1,22 @@
-<div class="container no-print">
-
-  {% if templateClass != "tmpl-home" %}
-  <footer class="sitefooter">
-  {% else %}
-  <footer class="sitefooter sitefooter--home">
-  {% endif %}
-    <ul class="sitefooter__list">
-      {% if templateClass != "tmpl-home" %}
-      <li class="getback__link"><a href="{{ '/' | url }}">back to homepage</a></li>
-      {% endif %}
-      <li><a href="/imprint.html">Imprint</a></li>
-      <li><a href="/colophon.html">Colophon</a></li>
-    </ul>
-  </footer>
+<div class="site-footer-wrapper">
+  <div class="container no-print">
+    {%- if templateClass != "tmpl-home" %}
+    <footer class="site-footer">
+    {% else %}
+    <footer class="site-footer site-footer--home">
+    {% endif -%}
+      <ul class="site-footer__list">
+        {%- if templateClass != "tmpl-home" %}
+        <li class="getback__link"><a href="{{ '/' | url }}">Startseite</a></li>
+        {% endif -%}
+        <li><a href="/imprint.html">Impressum</a></li>
+        <li><a href="/colophon.html">Colophon</a></li>
+        <li><a href="https://grochtdreis.de">Grochtdreis.de</a></li>
+      </ul>
+    </footer>
+  </div>
 </div>
 
 <div class="container only-print">
-  printed from page: {{metadata.url}}{{ page.url | url }}
+gedruckt von der Seite {{metadata.url}}{{ page.url | url }}
 </div>

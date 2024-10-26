@@ -4,6 +4,8 @@ $root-vars: (
   pageBgColor: #{get-color("white")},
   linkColor: #{get-color("red", my)},
   linkColorHover: #{lighten(get-color("red", my), 10%)},
+  site-footer-bg: #{get-color("red", my)},
+  site-footer-color: #{get-color("white")},
 );
 
 @include cssvars($root-vars);
