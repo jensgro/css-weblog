@@ -72,25 +72,3 @@ $custom-colors: (
     "base": teal
   )
 );
-
-
-$page-bgcolor: get-color(white);
-$textcolor: get-color(black);
-$link-color: get-color(red);
-$link-color-hover: get-color(black);
-
-$siteheader-headline-cnt-bg: rgba(0,0,0,0.5);
-$siteheader-headline-cnt-color: #fafafa;
-
-$black:get-color("black");
-$white: get-color("white");
-$nearlywhite: get-color("white", nearly);
-$brown: get-color("brown");
-$mediumbrown: get-color("brown", medium);
-$red: get-color("red");
-$myred: get-color("red", my);
-$grey: get-color("grey");
-$lightgrey: get-color("grey", light);
-$darkgrey: get-color("grey", dark);
-$darkergrey: get-color("grey", darker);
-

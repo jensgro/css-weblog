@@ -1,9 +1,7 @@
 @use "../config" as *;
 
 .site-footer {
-  --borderTopColor: #{get-color(blue, medium)};
-
-  border-top: 2px solid var(--borderTopColor);
+  border-top: 2px solid var(--site-footer-border-top-color);
   padding: $space2 0;
 
   &__list {

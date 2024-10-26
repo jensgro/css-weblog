@@ -9,13 +9,14 @@
 // hide only visually
 // https://gist.github.com/jensgro/743c37c3c1b226f7917fa0fc0825e3c2
 @mixin visuallyhidden {
-  width: 1px;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
+  width: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
+  border: 0;
 }
 
 // Color Function

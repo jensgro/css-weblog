@@ -4,14 +4,14 @@ aside {
   padding: $space4;
   padding-top: $space6;
   margin: $space4 0;
-  background-color: $lightgrey;
+  background-color: var(--aside-bg);
   position: relative;
 
   &::before {
     content: "Auch interessant";
     display: inline-block;
     padding: $space1;
-    background-color: $grey;
+    background-color: var(aside-after-bg);
     font-size: rem(14);
     position: absolute;
     top: 0;

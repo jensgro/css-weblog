@@ -1,29 +1,29 @@
 @use "../config" as *;
 
 $nav-vars: (
-  mainNavBgCol: #{get-color("grey", dark)},
-  mainNavItemText: #{get-color("black")},
-  mainNavItemBgCol: #{get-color("white")},
-  inactiveNavBgHover: #{get-color("grey")},
-  activeNavBG: #{get-color("red", my)},
-  activeNavText: #{get-color("white")},
+  main-nav-bg-color: #{get-color("grey", dark)},
+  main-nav-item-text: #{get-color("black")},
+  main-nav-item-bg-color: #{get-color("white")},
+  main-nav-inactive-hover-bg: #{get-color("grey")},
+  active-nav-bg-color: #{get-color("red", my)},
+  active-nav-text-color: #{get-color("white")},
 );
 @include cssvars($nav-vars, ".main-nav");
 
 .main-nav {
-  background-color: var(--mainNavBgCol);
+  background-color: var(--main-nav-bg-color);
 
   &__nav {
     display: flex;
     flex-wrap: wrap;
     gap: $space2;
     padding-inline: $space1;
-
+    margin-block: 0;
   }
 
   &__item {
-    color: var(--mainNavItemText);
-    background-color: var(--mainNavItemBgCol);
+    color: var(--main-nav-item-text);
+    background-color: var(--main-nav-item-bg-color);
     text-transform: capitalize;
 
     &:first-of-type {
@@ -40,12 +40,12 @@ $nav-vars: (
 
     &:hover,
     &:focus {
-      background-color: var(--inactiveNavBgHover);
+      background-color: var(--main-nav-inactive-hover-bg);
     }
 
     &--active {
-      background-color: var(--activeNavBG);
-      color: var(--activeNavText);
+      background-color: var(--active-nav-bg-color);
+      color: var(--active-nav-text-color);
       font-weight: 700;
     }
   }
