@@ -1,0 +1,21 @@
+<!-- Kommt an! -->
+{% if source %}
+<figure class="source">
+  <p>Quelle: {{source}}</p>
+</figure>
+{% endif %}
+
+{% if sources %}
+<figure class="sources">
+  <figcaption>Quellen:</figcaption>
+  <ul>
+    {%- for source in sources -%}
+    <li class="list__item list__item--overview">
+      <a class="card__link--block" href="{{ source | url }}">
+      {{ source }}
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</figure>
+{% endif %}

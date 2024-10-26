@@ -5,6 +5,7 @@ templateClass: tmpl-post
 <div class="container">
   <main class="post-cnt">
     {{ content | safe }}
+    {% include "partials/source.njk" %}
   </main>
 </div>
 
