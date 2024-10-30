@@ -1,6 +1,6 @@
 {
   "layout": "layouts/article.njk",
-  "permalink": "css-grid/{{title | slugify}}.html",
+  "permalink": "artikel/{{title | slugify}}.html",
   "bodyClass": "article",
   "tags": "article"
 }
