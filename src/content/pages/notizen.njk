@@ -1,17 +1,17 @@
 ---
 layout: layouts/post.njk
-permalink: /til.html
-bodyClass: til
+permalink: /notizen.html
+bodyClass: notizen
 eleventyNavigation:
-  key: til
+  key: notizen
   order: 1
 
-title: "TIL (Things I Learned)"
+title: "Notizen"
 headerImage: "875x250-green.png"
 ---
 
 <ul>
-  {%- for p in collections.til %}
+  {%- for p in collections.notizen %}
     <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
   {%- endfor -%}
 </ul>

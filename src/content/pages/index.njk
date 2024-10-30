@@ -23,8 +23,8 @@ headerImage: "875x250-myred.png"
     {% endif %}
 
 
-    {% if "til" in item.cat %}
-      {% for post in collections.til %}
+    {% if "notizen" in item.cat %}
+      {% for post in collections.notizen %}
           {% set tagUrl %}/{{ tag }}/{% endset %}
         {% if loop.first %}<ul class="index-list">{% endif %}
           <li>

@@ -1,4 +1,4 @@
 [
   { "title": "Artikel", "cat": "article"},
-  { "title": "TIL", "cat": "til"}
+  { "title": "Notizen", "cat": "notizen"}
 ]
