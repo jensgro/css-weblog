@@ -5,7 +5,8 @@ tags:
     - template
     - 11ty
 source:
-    - "http://mozilla.github.io/nunjucks/templating.html#for"
+    - url: http://mozilla.github.io/nunjucks/templating.html#for
+      title: Nunjucks-Doku
 
 ---
 Manchmal möchte man nicht alle Ergebnisse einer collection in 11ty zeigen, sondern nur einen Teil. Beispielsweise auf Übersichtsseiten, auf der eventuell nur fünf ausgewählte Einträge gezeigt werden sollen. Das ist ganz einfach möglich:

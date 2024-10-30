@@ -5,8 +5,10 @@ tags:
     - template
     - 11ty
 sources:
-    - https://github.com/11ty/eleventy/issues/297
-    - https://michaelheap.com/nunjucks-concatenate-string/
+    - url: https://github.com/11ty/eleventy/issues/297
+      title: 11ty Github Issue
+    - url: https://michaelheap.com/nunjucks-concatenate-string/
+      title: Artikel von Michael Heap
 ---
 
 Michael Heap [beschreibt](https://michaelheap.com/nunjucks-concatenate-string/), wie er in Nunjucks Strings zusammenfasst. Er setzt dafür eine Variable und fasst deren Bestandteile mit ``join`` zusammen:

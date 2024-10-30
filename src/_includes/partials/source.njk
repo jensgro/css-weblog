@@ -1,7 +1,9 @@
 {% if source %}
+{%- for source in source -%}
 <figure class="source">
-  <p>Quelle: <a href="{{ source | url }}">{{source}}</a></p>
+  <p>Quelle: <a href="{{ source.url | url }}">{{source.title}}</a></p>
 </figure>
+{%- endfor -%}
 {% endif %}
 
 {% if sources %}
@@ -10,8 +12,8 @@
   <ul>
     {%- for source in sources -%}
     <li class="list__item list__item--overview">
-      <a class="card__link--block" href="{{ source | url }}">
-      {{ source }}
+      <a class="card__link--block" href="{{ source.url | url }}">
+      {{ source.title }}
       </a>
     </li>
     {%- endfor -%}

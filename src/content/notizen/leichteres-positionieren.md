@@ -5,7 +5,8 @@ tags:
     - positionieren
     - basics
 source:
-    - https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/inset
+    - url: https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/inset
+      title: SelfHTML
 
 ---
 Wollten wir ein Element über die gesamte Seite ausdehnen und absolut positionieren, mussten wir bisher immer alle vier Himmelsrichtungen angeben. Das sah dann so aus:

@@ -4,7 +4,8 @@ tags:
     - 11ty
     - nunjucks
 source:
-    - https://github.com/11ty/eleventy/issues/2611
+    -  url: https://github.com/11ty/eleventy/issues/2611
+       title: 11ty Github Issue
 ---
 
 Es kann sehr sinnvoll sein, keine Markdown-Dateien, sondern Nunjucks-Dateien zu erstellen und dann spezielle Nunjucks-Features zu nutzen.
