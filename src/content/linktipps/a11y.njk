@@ -1,0 +1,8 @@
+---
+title: A11y-Links
+---
+<ul class="linklist">
+{% for item in a11yLinks %}
+  <li><a href="{{item.url | url}}">{{item.name}}</li>
+{% endfor %}
+</ul>

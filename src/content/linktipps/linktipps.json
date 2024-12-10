@@ -1,7 +1,6 @@
 {
-  "layout": "layouts/post.njk",
+  "layout": "layouts/article.njk",
   "permalink": "linktipps/{{title | slugify}}.html",
   "bodyClass": "linktipps",
-  "tags": "linktipps",
-  "eleventyExcludeFromCollections": true
+  "tags": "linktipps"
 }
