@@ -1,0 +1,17 @@
+---
+layout: layouts/post.njk
+permalink: /linktipps.html
+bodyClass: linktipps
+eleventyNavigation:
+  key: linktipps
+  order: 4
+
+title: "Linktipps"
+headerImage: "875x250-green.png"
+---
+
+<ul>
+  {%- for p in collections.linktipps %}
+    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
+  {%- endfor -%}
+</ul>

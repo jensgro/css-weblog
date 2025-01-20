@@ -1,7 +1,7 @@
 @use "../config" as *;
 
 $nav-vars: (
-  main-nav-bg-color: #{get-color("red", "my")},
+  main-nav-bg-color: #{get-color("blue", "green1")},
   main-nav-item-text: #{get-color("black")},
   main-nav-item-bg-color: #{get-color("white")},
   main-nav-inactive-hover-bg: #{get-color("grey")},
