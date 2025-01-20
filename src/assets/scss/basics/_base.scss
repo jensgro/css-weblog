@@ -4,7 +4,7 @@
 // The custom properties for :root
 $root-vars: (
   text-color: #{get-color("black")},
-  page-bg-color: #{get-color("white")},
+  page-bg-color: #{get-color("blue","white")},
   linkColor: #{get-color("red", "my")},
   linkColorHover: #{color.adjust(get-color("red", "my"),$lightness: 10%)},
   code-bg: #{get-color("brown", "medium")},
