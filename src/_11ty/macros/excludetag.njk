@@ -1,0 +1,8 @@
+{% macro excludeTag(tag) %}
+  {% set tags = Object.keys(collections) | filter('_ != tag') %}
+  {% for t in tags %}
+    {{ t }}
+  {% endfor %}
+{% endmacro %}
+
+{% excludeTag("posts") %}

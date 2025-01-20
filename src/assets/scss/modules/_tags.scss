@@ -1,0 +1,31 @@
+@use "../config" as *;
+$tag-vars: (
+  tag-link-bg-color: #{get-color('grey', 'lighter')},
+  tag-link-hover-bg-color: #{get-color('grey', 'light')},
+  tag-link-color: #{get-color('grey', 'dark')},
+);
+@include cssvars($tag-vars, ".tags");
+
+//.tags {}
+
+.taglist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0.5rem;
+}
+.taglist__link {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--tag-link-bg-color);
+  color: var(--tag-link-color);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover, &:focus {
+    background-color: var(--tag-link-hover-bg-color);
+  }
+}
