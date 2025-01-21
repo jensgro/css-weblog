@@ -42,3 +42,8 @@
     display: block;
   }
 }
+
+.list__item {
+  margin-bottom: $space2;
+  font-size: rem(20);
+}
