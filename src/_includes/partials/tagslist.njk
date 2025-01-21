@@ -1,7 +1,7 @@
 <h2 class="separator"><span>Alle Seiten der Kategorie <mark>{{ tag | capitalize }}</mark></span></h2>
-<ol class="list list--grid">
+<ol>
   {%- for post in postslist -%}
-  <li class="list__item list__item--overview">
+  <li class="list__item">
     <a class="card__link--block" href="{{ post.url | url }}">
     {{ post.data.title }}
     </a>
