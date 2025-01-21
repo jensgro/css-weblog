@@ -8,24 +8,29 @@ title: "CSS-Weblog"
 subline: "CSS und mehr"
 ---
 
-    <h2>Artikel</h2>
+    <div class="full-bleed full-bleed-color">
+      <h2 class="container">Artikel</h2>
+    </div>
     
     {% for post in collections.article %}
       {% if loop.first %}<ul class="index-list">{% endif %}
         {% include "partials/link-list-item.njk" %}
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
-  
-    <h2>Notizen</h2>
-    
+
+    <div class="full-bleed full-bleed-color">
+    <h2 class="container">Notizen</h2>
+    </div>
     {% for post in collections.notizen %}
       {% if loop.first %}<ul class="index-list">{% endif %}
         {% include "partials/link-list-item.njk" %}
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
 
-    <h2>Linktipps</h2>
-    
+    <div class="full-bleed full-bleed-color">
+    <h2 class="container">Linktipps</h2>
+    </div>
+
     {% for post in collections.linktipps %}
       {% if loop.first %}<ul class="index-list">{% endif %}
         {% include "partials/link-list-item.njk" %}

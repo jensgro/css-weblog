@@ -5,12 +5,10 @@
     {% if post.data.tags %}
     <li class="list-item-tags"> Tag(s):
       {%- for tag in post.data.tags -%}
-        <span class="list-item-tag">
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <a href="{{ tagUrl | url }}">
+          <a class="list-item-tag" href="{{ tagUrl | url }}">
             {{ tag }}
           </a>
-        </span>
         {%- endfor -%}
       </li> 
       {% endif %}

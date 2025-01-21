@@ -5,8 +5,8 @@ $nav-vars: (
   main-nav-item-text: #{get-color("black")},
   main-nav-item-bg-color: #{get-color("white")},
   main-nav-inactive-hover-bg: #{get-color("grey")},
-  active-nav-bg-color: #{get-color("green", "strong")},
-  active-nav-text-color: #{get-color("white")},
+  active-nav-bg-color: #{get-color("blue", "light1")},
+  active-nav-text-color: #{get-color("black")},
 );
 @include cssvars($nav-vars, ".main-nav");
 

@@ -4,6 +4,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+body.index {
+  overflow-x: hidden;
+}
 .site-footer-wrapper {
   margin-top: auto;
 }

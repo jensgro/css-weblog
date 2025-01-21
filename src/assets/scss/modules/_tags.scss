@@ -4,8 +4,13 @@ $tag-vars: (
   tag-link-hover-bg-color: #{get-color('grey', 'light')},
   tag-link-color: #{get-color('grey', 'dark')},
 );
+$tag-vars-2: (
+  tag-link-bg-color: #{get-color('grey', 'dark')},
+  tag-link-hover-bg-color: #{get-color('black')},
+  tag-link-color: #{get-color('white')},
+);
 @include cssvars($tag-vars, ".tags");
-@include cssvars($tag-vars, ".tag");
+@include cssvars($tag-vars-2, ".list-item-tag");
 
 //.tags {}
 

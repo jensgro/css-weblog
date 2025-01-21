@@ -10,6 +10,11 @@
   margin-left: calc(50% - 50vw);
 }
 
+.full-bleed-color {
+  background-color: var(--full-bleed-bg);
+  color: var(--full-bleed-color);
+}
+
 .bg-wrapper {
   background-color: get-color(grey);
 }
