@@ -1,5 +1,6 @@
 ---
 title: Kooperation der Browserhersteller
+date: 2024-11-20
 tags:
   - browser
 ---

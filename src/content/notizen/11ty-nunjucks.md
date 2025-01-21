@@ -1,5 +1,6 @@
 ---
 title: Nunjucks in 11ty
+date: 2024-11-20
 tags:
     - 11ty
     - nunjucks

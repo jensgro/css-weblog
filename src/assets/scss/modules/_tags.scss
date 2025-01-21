@@ -5,6 +5,7 @@ $tag-vars: (
   tag-link-color: #{get-color('grey', 'dark')},
 );
 @include cssvars($tag-vars, ".tags");
+@include cssvars($tag-vars, ".tag");
 
 //.tags {}
 
@@ -24,6 +25,19 @@ $tag-vars: (
   font-size: 0.875rem;
   text-decoration: none;
   transition: background-color 0.2s;
+
+  &:hover, &:focus {
+    background-color: var(--tag-link-hover-bg-color);
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.025rem 0.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--tag-link-bg-color);
+  color: var(--tag-link-color);
 
   &:hover, &:focus {
     background-color: var(--tag-link-hover-bg-color);

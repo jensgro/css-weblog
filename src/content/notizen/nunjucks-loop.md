@@ -1,5 +1,6 @@
 ---
 title: Einen Teil eines Nunjucks-Loops durchlaufen
+date: 2024-11-20
 tags:
     - nunjucks
     - template
