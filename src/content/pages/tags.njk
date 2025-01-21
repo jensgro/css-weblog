@@ -1,12 +1,7 @@
 ---
-title: "Archive"
-headerImage: "875x250-blue.png"
 eleventyExcludeFromCollections: true
-eleventyNavigation:
-  key: archive
-  order: 3
 permalink: /tags/{{ tag }}/
-layout: layouts/home.njk
+layout: layouts/tags.njk
 bodyClass: tag
 
 pagination:
@@ -23,12 +18,8 @@ pagination:
     - article
     - notizen
   addAllPagesToCollections: true
-renderData:
-  title: Kategorie "{{ tag }}"
-
 ---
 
-
-{% set postslist = collections[ tag ] %}
-{% include "partials/tagslist.njk" %}
-
+<h1>Alle Seiten der Kategorie "{{ tag  }}"</h1>
+      {% set postslist = collections[ tag ] %}
+      {% include "partials/tagslist-light.njk" %}

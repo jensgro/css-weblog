@@ -1,9 +1,10 @@
-{% set templateClass = "tmpl-home" %}
+{% set templateClass = "tmpl-tags" %}
+
 {% include "partials/page-header.njk" %}
 {% include "partials/navigation.njk" %}
-{% include "partials/site-header.njk" %}
 <div class="container">
   <main class="home-cnt">
+      
       {{ content | safe }}
   </main>
 </div>

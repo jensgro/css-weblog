@@ -1,6 +1,5 @@
 {
   "layout": "layouts/article.njk",
   "permalink": "linktipps/{{title | slugify}}.html",
-  "bodyClass": "linktipps",
-  "tags": "linktipps"
+  "bodyClass": "linktipps"
 }

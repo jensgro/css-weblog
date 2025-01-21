@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Startseite",
+        "class": "index",
+        "url": "/"
+    },
+    {
+        "title": "Notizen",
+        "class": "notizen",
+        "url": "/notizen"
+    },
+    {
+        "title": "Artikel",
+        "class": "article",
+        "url": "/artikel"
+    },
+    {
+        "title": "Linktipps",
+        "class": "linktipps",
+        "url": "/linktipps"
+    }
+]

@@ -1,6 +1,5 @@
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginNavigation = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedCodePen = require("@manustays/eleventy-plugin-codepen-iframe");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
@@ -22,15 +21,18 @@ const htmlDateString = require(configPath+"filters/date.js").htmlDateString;
 const head = require(configPath+"filters/head.js");
 
 // collections
-const post = require(configPath+"collections/post.js");
-const postDescending = require(configPath+"collections/postDescending.js");
+const article = require(configPath+"collections/article.js");
+const articleDescending = require(configPath+"collections/articleDescending.js");
+const notizen = require(configPath+"collections/notizen.js");
+const notizenDescending = require(configPath+"collections/notizenDescending.js");
+const linktipps = require(configPath+"collections/linktipps.js");
+const linktippsDescending = require(configPath+"collections/linktippsDescending.js");
 
 // plugins
 const markdownLib = require(configPath+'plugins/markdown.js');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
@@ -44,8 +46,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("htmlDateString", htmlDateString);
   eleventyConfig.addFilter("head", head);
 
-  eleventyConfig.addCollection("post", post);
-  eleventyConfig.addCollection("postDescending", postDescending);
+  eleventyConfig.addCollection("article", article);
+  eleventyConfig.addCollection("articleDescending", articleDescending);
+  eleventyConfig.addCollection("notizen", notizen);
+  eleventyConfig.addCollection("notizenDescending", notizenDescending);
+  eleventyConfig.addCollection("linktipps", linktipps);
+  eleventyConfig.addCollection("linktippsDescending", linktippsDescending);
 
   eleventyConfig.setDataDeepMerge(true);
 

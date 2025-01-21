@@ -2,6 +2,5 @@
   "layout": "layouts/post.njk",
   "permalink": "notizen/{{title | slugify}}.html",
   "bodyClass": "notizen",
-  "headerClass": "notizen",
-  "tags": "notizen"
+  "headerClass": "notizen"
 }
