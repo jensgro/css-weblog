@@ -16,13 +16,6 @@ Some soultions like the shortcodes and some filters were taken from the great st
 - ``bodyClass`` will become the class of the ``body``-element
 - ``eleventyNavigation`` has a least one attribute: ``key`` which sorts the page to a navigation category. A second possible option is ``order``. More about the navigation-plugin can be found [in the documentation](https://www.11ty.dev/docs/plugins/navigation/).
 
-## The categories
-
-The order of categories in ``_data/categories.json`` will be the  displayed order.
-
-The ``title``will be the displayed headline, the ``cat`` is the variable with which the sorting takes place.
-The folder name is reflected in the value of the ``cat``-variable. The collection is constructed via tag. The tag is placed globally inside the local json inside the respective folfer, e.g. "``css-grid.json`` inside the folder "css-grid".
-
 ## Helpful 11ty-links
 
 - [11ty documentation](https://www.11ty.dev/docs/)
