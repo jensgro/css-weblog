@@ -6,7 +6,9 @@
   @media print {
     aspect-ratio: auto;
   }
-
+  &__headline {
+    font-size: clamp(30px,8vw,6rem);
+  }
   &__headline,
   &__subline {
     margin-bottom: 0;
