@@ -17,20 +17,27 @@ $nav-vars: (
 
   nav {
     display: flex;
-    justify-content: space-between;
-
-    img {
-      width: 48px;
-      height: 48px;
-    }
+    align-items: center;
   }
   
+  &__logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 40px;
+  }
+
+  &__site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
   &__nav {
     display: flex;
     flex-wrap: wrap;
     gap: $space2;
     padding-inline: $space1;
     margin-block: 0;
+    margin-left: auto;
   }
 
   &__item {
@@ -62,4 +69,8 @@ $nav-vars: (
       font-weight: 700;
     }
   }
+}
+
+body.index .main-nav__site-title {
+  display: none;
 }

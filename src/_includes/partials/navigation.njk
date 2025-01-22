@@ -1,6 +1,7 @@
 <header class="main-nav no-print">
   <nav class="container">
-    <img src="{{'/assets/img/logo/jg-logo-48x48.png' | url}}" alt="Logo von Jens Grochtdreis">
+    <img class="main-nav__logo" src="{{'/assets/img/logo/jg-logo-48x48.png' | url}}" alt="Logo von Jens Grochtdreis">
+    <span class="main-nav__site-title">CSS-Weblog</span>
     <ul class="main-nav__nav">
     {%- for entry in mainnavigation %}
       <li  class="main-nav__item">
