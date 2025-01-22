@@ -1,12 +1,12 @@
 @use "../config" as *;
 
 $nav-vars: (
-  main-nav-bg-color: #{get-color("blue", "green1")},
-  main-nav-item-text: #{get-color("black")},
+  main-nav-bg-color: #12768c,
+  main-nav-item-text: #{get-color("black", "lighter")},
   main-nav-item-bg-color: #{get-color("white")},
-  main-nav-inactive-hover-bg: #{get-color("grey")},
-  active-nav-bg-color: #{get-color("blue", "light1")},
-  active-nav-text-color: #{get-color("black")},
+  main-nav-inactive-hover-bg: #259fb6,
+  active-nav-bg-color: #259fb6,
+  active-nav-text-color: #{get-color("black", "lighter")}
 );
 @include cssvars($nav-vars, ".main-nav");
 

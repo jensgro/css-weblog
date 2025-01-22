@@ -29,7 +29,8 @@ $systemfonts-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, mon
 // ======= Farben
 $custom-colors: (
   "black": (
-    "base": #000
+    "base": #000,
+    "lighter": "#212121"
   ),
   "white": (
     "base": #fff,
@@ -58,6 +59,7 @@ $custom-colors: (
     "base": #c0c0c0,
     "light": #e0e0e0,
     "lighter": #f7f7f7,
+    "medium": #64748b,
     "dark": #333,
     "darker": #aaa,
   ),
@@ -65,6 +67,8 @@ $custom-colors: (
     "white": #e3e4ef,
     "green1": #147595,
     "base": #0b4396,
+    "indigo": #312e81,
+    "indigolight": #A5B4FC,
     "light1": #a0cbe4,
     "light2": #c0e7fe,
     "medium": #0277BD,
@@ -77,3 +81,24 @@ $custom-colors: (
     "strong": #2f6b1b,
   )
 );
+
+
+$darkbg: #312e81;
+$colorOnDark: #fff;
+
+$mediumbg: #A5B4FC;
+$colorOnMedium: #212121;
+
+//$lightbg: ;
+//$colorOnLight: get-color("black", "lighter");
+
+
+// :root {
+//   --sunset1:#332971;
+//   --sunset2:#5f3767;
+//   --sunset3:#ac5067;
+//   --sunset4:#e67369;
+//   --sunset5:#fb9c63;
+//   --sunset6:#febf57;
+//   --sunset7:#ffd043;
+// }

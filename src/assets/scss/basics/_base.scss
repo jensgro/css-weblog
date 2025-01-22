@@ -3,7 +3,7 @@
 
 // The custom properties for :root
 $root-vars: (
-  text-color: #{get-color("black")},
+  text-color: #{get-color("black", "lighter")},
   page-bg-color: #{get-color("grey","lighter")},
   linkColor: #{get-color("red", "my")},
   linkColorHover: #{color.adjust(get-color("red", "my"),$lightness: 10%)},
@@ -12,12 +12,11 @@ $root-vars: (
   aside-after-bg: #{get-color("grey")},
   card-img-border-color: #{get-color("grey")},
   details-border-color: #{get-color("grey", "darker")},
-  full-bleed-bg: #{get-color("blue", "light1")},
-  full-bleed-color: #{get-color("black")}
+  full-bleed-bg: #a0cbe4,
+  full-bleed-color:  #{get-color("black", "lighter")}
 );
 
 @include cssvars($root-vars);
-
 
 // A modified version of Andy Bell's "modern reset" https://github.com/hankchizljaw/modern-css-reset
 
