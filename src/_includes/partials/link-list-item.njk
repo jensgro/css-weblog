@@ -1,16 +1,6 @@
 <li>
   <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-  <ul class="list-item-meta">
-    <li>{{ post.data.date | htmlDateString }}</li>
-    {% if post.data.tags %}
-    <li class="list-item-tags"> Tag(s):
-      {%- for tag in post.data.tags -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <a class="list-item-tag" href="{{ tagUrl | url }}">
-            {{ tag }}
-          </a>
-        {%- endfor -%}
-      </li> 
-      {% endif %}
-  </ul>
+  <div class="list-item-meta">
+    {{ post.data.date | htmlDateString }}
+  </div>
 </li>

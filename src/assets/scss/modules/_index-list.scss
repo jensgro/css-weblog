@@ -1,4 +1,12 @@
 .index-list {
     display: grid;
     gap: 20px;
+
+    h3 {
+        margin-block: 4px;
+
+        &:hover, &:focus {
+            color: #a20000;
+        }
+    }
 }
