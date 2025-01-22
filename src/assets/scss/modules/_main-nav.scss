@@ -18,6 +18,11 @@ $nav-vars: (
   nav {
     display: flex;
     justify-content: space-between;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
   }
   
   &__nav {
