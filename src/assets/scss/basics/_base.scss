@@ -109,6 +109,10 @@ h5 {font-size: rem(20);}
   padding-left: 0;
 }
 
+:where(li) {
+  margin-bottom: 4px;
+}
+
 /* ================ */
 
 :where(hr) {
