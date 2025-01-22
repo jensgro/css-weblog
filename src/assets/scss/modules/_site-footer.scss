@@ -1,7 +1,7 @@
 @use "../config" as *;
 
 $site-footer-vars: (
-  site-footer-bg: #12768c,
+  site-footer-bg: #{get-color('green', 'medium')},
   site-footer-color: #{get-color("white")}
 );
 

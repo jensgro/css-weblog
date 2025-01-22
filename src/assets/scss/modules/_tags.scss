@@ -1,16 +1,10 @@
 @use "../config" as *;
 $tag-vars: (
-  tag-link-bg-color: #{get-color('grey', 'lighter')},
-  tag-link-hover-bg-color: #{get-color('grey', 'light')},
-  tag-link-color: #{get-color('grey', 'dark')},
-);
-$tag-vars-2: (
-  tag-link-bg-color: #{get-color('grey', 'dark')},
-  tag-link-hover-bg-color: #{get-color('black')},
-  tag-link-color: #{get-color('white')},
+  tag-link-bg-color: #{get-color('green', 'medium')},
+  tag-link-hover-bg-color: #{get-color('green', 'strong')},
+  tag-link-color: #{get-color('white', 'nearly2')},
 );
 @include cssvars($tag-vars, ".tags");
-@include cssvars($tag-vars-2, ".list-item-tag");
 
 //.tags {}
 

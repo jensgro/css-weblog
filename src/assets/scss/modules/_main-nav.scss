@@ -61,7 +61,7 @@ $nav-vars: (
     &:hover,
     &:focus,
     &--active {
-      --main-nav-bg-color: #12768c;
+      --main-nav-bg-color: #{get-color('green', 'medium')};
     }
 
     &--active {
