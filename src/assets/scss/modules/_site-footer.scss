@@ -2,16 +2,18 @@
 
 $site-footer-vars: (
   site-footer-bg: #12768c,
-  site-footer-color: #{get-color("white")},
-  site-footer-border-top-color: #{get-color("blue", "medium")},
+  site-footer-color: #{get-color("white")}
 );
 
 @include cssvars($site-footer-vars, ".site-footer-wrapper");
 
-.site-footer {
-  //border-top: 2px solid var(--site-footer-border-top-color);
-  //padding: $space2 0;
+.site-footer-wrapper {
+  color: var(--site-footer-color);
+  background-color: var(--site-footer-bg);
+  padding: $space1;
+}
 
+.site-footer {
   &__list {
     display: flex;
     justify-content: flex-start;
@@ -50,8 +52,3 @@ $site-footer-vars: (
   }
 }
 
-.site-footer-wrapper {
-  color: var(--site-footer-color);
-  background-color: var(--site-footer-bg);
-  padding: $space1;
-}
