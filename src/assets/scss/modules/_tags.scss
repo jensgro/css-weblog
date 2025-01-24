@@ -6,7 +6,9 @@ $tag-vars: (
 );
 @include cssvars($tag-vars, ".tags");
 
-//.tags {}
+.tags {
+  margin-top: $space4;
+}
 
 .taglist {
   display: flex;
