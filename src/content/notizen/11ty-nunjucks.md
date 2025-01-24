@@ -1,5 +1,5 @@
 ---
-title: Nunjucks in 11ty
+title: Mehrere Codeblöcke in 11ty
 date: 2024-11-20
 tags:
     - 11ty
@@ -11,7 +11,7 @@ source:
 
 Es kann sehr sinnvoll sein, keine Markdown-Dateien, sondern Nunjucks-Dateien zu erstellen und dann spezielle Nunjucks-Features zu nutzen.
 
-Wenn man in einer Nunjucks-Seite anstelle des Links zum Template im Frontmatter das Template “extended”, dann kann man auf erweiterte Features zugreifen, die sonst nicht möglich sind.
+Wenn man in einer Nunjucks-Seite anstelle des Links zum Template im Frontmatter das Template "extended", dann kann man auf erweiterte Features zugreifen, die sonst nicht möglich sind.
 
 ```jsx
 {% raw %}
