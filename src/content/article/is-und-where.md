@@ -6,7 +6,8 @@ tags:
     - selektoren
     - basics
 source:
-    - https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/inset
+    - url: https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/inset
+      title: SELFHTML
 
 ---
 Flexbox und CSS-Grid revolutionierten unseren Umgang mit dem Layout, schufen neue Möglichkeiten. Die Einführung der  drei Pseudoklassen ``:where()``, ``:is()`` und ``:has()`` packe ich in eine ähnliche Kategorie. Diese neuen Pseudoklassen können unsere Codebasis erheblich verschlanken und unseren Code lesbarer machen. Schauen wir uns die ersten beiden einmal in Beispielen an.
@@ -49,20 +50,3 @@ ul[class] { color: red; }
 /* 1,0,0 */
 :is(ul[class], #michGibtEsNicht) { color: red; }
 {% endhighlight %}
-
-
-
-{% highlight "css" %}
-
-{% endhighlight %}
-
-
-
-{% highlight "css" %}
-
-{% endhighlight %}
-
-{% highlight "css" %}
-
-{% endhighlight %}
-
