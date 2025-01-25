@@ -8,6 +8,6 @@ title: "Notizen"
 
 <ul>
   {%- for p in collections.notizen %}
-    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
+    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a> [{{ p.data.date  | htmlDateString }}]</li>
   {%- endfor -%}
 </ul>
