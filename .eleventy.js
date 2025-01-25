@@ -70,6 +70,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"./src/static/":"/"});
 
   eleventyConfig.addPassthroughCopy({"./src/assets/img": "assets/img"});
+  eleventyConfig.addPassthroughCopy({"./src/assets/svg": "assets/svg"});
   eleventyConfig.addPassthroughCopy({"./src/assets/js": "assets/js"});
   eleventyConfig.addPassthroughCopy({"./src/assets/fonts": "assets/fonts"});
 
