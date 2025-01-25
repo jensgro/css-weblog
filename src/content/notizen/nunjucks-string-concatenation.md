@@ -37,11 +37,9 @@ In einem Github-Issue gibt es zwei weitere Vorschläge:
 
 {% highlight "js" %}
 {% raw %}
-
 {% set canonical %}
-{{ config.baseUrl }}{{ page.url }}
+  {{ config.baseUrl }}{{ page.url }}
 {% endset %}
-
 {% endraw %}
 {% endhighlight %}
 

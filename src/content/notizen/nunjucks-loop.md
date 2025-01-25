@@ -15,14 +15,9 @@ Manchmal möchte man nicht alle Ergebnisse einer collection in 11ty zeigen, sond
 {% highlight "js" %}
 
 {% raw %}{% for images in index %}{% endraw %}
-{% raw %}{% if (loop.index <= 5) %}{% endraw %}
-    <div class="spacer col-md-2 col-sm-6">
-
-    </div>
-    <div class="yellp-img col-md-2 col-sm-6">
-        <img src="/uploads/images/{{ images.image.filename }}" />
-    </div>
-{% raw %}{% endif %}{% endraw %}
+    {% raw %}{% if (loop.index <= 5) %}{% endraw %}
+    <!-- Hier kommt das notwendige HTML hin ... -->
+    {% raw %}{% endif %}{% endraw %}
 {% raw %}{% endfor %}{% endraw %}
 
 {% endhighlight %}
