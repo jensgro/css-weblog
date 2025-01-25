@@ -1,0 +1,9 @@
+@use "../config" as *;
+.list {
+    list-style-type: square;
+    padding-left: $space4;
+
+    li {
+        margin-bottom: $space2;
+    }
+}
