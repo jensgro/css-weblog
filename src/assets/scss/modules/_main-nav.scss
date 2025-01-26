@@ -31,13 +31,61 @@ $nav-vars: (
     font-weight: 700;
   }
 
+  &__toggle-button {
+    margin-left: auto;
+    font-weight: bold;
+    border: 1px solid #000;
+    padding: $space1;
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
+  // Der Navigations-Wrapper
+  &__content {
+    height: 100dvh;
+    width: 100dvw;
+    @media (min-width: $md) {
+      position: static;
+      margin-left: auto;
+      display: contents;
+    }
+
+    &::backdrop {
+      background-color: rgba(255,255,255, 0.5);
+      position: fixed;
+      inset: 0;
+    }
+
+
+  }
+
+  &__close-button {
+    position: absolute;
+    top: $space2;
+    right: $space2;
+    font-weight: bold;
+    border: 1px solid #000;
+    padding: $space1;
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
   &__nav {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: $space2;
+    gap: $space4;
     padding-inline: $space1;
-    margin-block: 0;
-    margin-left: auto;
+    margin-block: $space2;
+    
+    @media (min-width: $md) {
+      flex-direction: row;
+      gap: $space2;
+      margin-block: 0;
+      margin-left: auto;
+    }
   }
 
   &__item {
@@ -74,3 +122,4 @@ $nav-vars: (
 body.index .main-nav__site-title {
   display: none;
 }
+
