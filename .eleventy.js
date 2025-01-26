@@ -13,7 +13,8 @@ const {
   figImg,
   details,
   aside,
-  codepenImg
+  codepenImg,
+  svgSprite
 } = require(configPath+'shortcodes/index.js');
 
 // filters
@@ -58,6 +59,7 @@ module.exports = function(eleventyConfig) {
   // 	--------------------- Custom shortcodes ---------------------
   eleventyConfig.addPairedShortcode('details', details);
   eleventyConfig.addPairedShortcode('aside', aside);
+  eleventyConfig.addShortcode('svgSprite', svgSprite);
   eleventyConfig.addShortcode('figImg', figImg);
   eleventyConfig.addShortcode('codepenImg', codepenImg);
   eleventyConfig.addShortcode('youtube', liteYoutube);
