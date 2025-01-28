@@ -1,6 +1,6 @@
 ---
 title: Strings in Nunjucks zusammenfassen
-date: 2024-11-20
+date: 2024-10-11
 tags:
     - nunjucks
     - template

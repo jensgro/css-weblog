@@ -1,6 +1,6 @@
 ---
 title: Mehrere Codeblöcke in 11ty
-date: 2024-11-20
+date: 2024-10-10
 tags:
     - 11ty
     - nunjucks
