@@ -1,5 +1,4 @@
 const markdownIt = require('markdown-it');
-const markdownItPrism = require('markdown-it-prism');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItClass = require('@toycode/markdown-it-class');
 const markdownItFootnote = require('markdown-it-footnote');
@@ -13,10 +12,6 @@ const markdownLib = markdownIt({
   linkify: true,
   typographer: true
 })
-  .disable('code')
-  .use(markdownItPrism, {
-    defaultLanguage: 'plaintext'
-  })
   .use(markdownItAnchor, {
     slugify: slugifyString,
     tabIndex: false,
