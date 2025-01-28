@@ -32,12 +32,18 @@ $nav-vars: (
   }
 
   &__toggle-button {
+    display: flex;
+    gap: $space2;
+    font-size: 0.8rem;
     margin-left: auto;
     font-weight: bold;
     border: 1px solid #000;
     padding: $space1;
     @media (min-width: $md) {
       display: none;
+    }
+    svg {
+      fill: get-color('black');
     }
   }
 
@@ -65,6 +71,7 @@ $nav-vars: (
     top: $space2;
     right: $space2;
     font-weight: bold;
+    font-size: 0.8rem;
     border: 1px solid #000;
     padding: $space1;
     @media (min-width: $md) {
