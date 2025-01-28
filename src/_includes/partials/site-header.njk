@@ -13,9 +13,9 @@
         <p class="site-header__subline">{{ subline }}</p>
         {% endif %}
      </div>
-     
+     {% if templateClass != "tmpl-home"%}
      <div class="date">{{ date | htmlDateString }}</div>
-          
+     {% endif %}    
     </header>
   </div>
 {% if bgwrapper %}

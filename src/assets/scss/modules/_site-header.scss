@@ -2,6 +2,7 @@
 
 .site-header {
   position: relative;
+  margin-top: $space5;
 
   @media print {
     aspect-ratio: auto;
