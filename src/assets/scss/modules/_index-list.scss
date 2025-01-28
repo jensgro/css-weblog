@@ -1,12 +1,16 @@
+@use "../config/" as *;
+
 .index-list {
     display: grid;
     gap: 20px;
 
-    h3 {
-        margin-block: 4px;
+    a {
+        display: block;
+        font-size: rem(31);
+        margin-block: $space05;
 
         &:hover, &:focus {
-            color: #a20000;
+            color: get-color("red", "my");
         }
     }
 }
