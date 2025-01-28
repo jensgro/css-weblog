@@ -12,16 +12,39 @@
 //   src: url("../fonts/pt-sans-v17-latin/pt-sans-v17-latin-700.woff2") format('woff2');
 // }
 
-@font-face {
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/assistant/assistant-v18-latin-500.woff2") format('woff2');
-}
+
+// @font-face {
+//   font-family: 'blokk';
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url("../fonts/blokk/blokkneue-regular.woff2") format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Assistant';
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url("../fonts/assistant/assistant-v18-latin-500.woff2") format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Assistant';
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url("../fonts/assistant/assistant-v18-latin-700.woff2") format('woff2');
+// }
 
 @font-face {
-  font-family: 'Assistant';
+  font-family: 'fira-sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/fira/fira-sans-book.woff2") format('woff2');
+}
+
+
+@font-face {
+  font-family: 'fira-sans';
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/assistant/assistant-v18-latin-700.woff2") format('woff2');
+  src: url("../fonts/fira/fira-sans-bold.woff2") format('woff2');
 }
