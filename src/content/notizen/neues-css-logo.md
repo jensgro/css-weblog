@@ -1,6 +1,6 @@
 ---
 title: CSS hat ein neues Logo
-date: 2024501-02
+date: 2024-01-02
 tags:
     - css
 ---
