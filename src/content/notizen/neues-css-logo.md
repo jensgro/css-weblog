@@ -1,6 +1,7 @@
 ---
 title: CSS hat ein neues Logo
 date: 2025-01-02
+icon: css
 tags:
     - css
 ---

@@ -1,6 +1,7 @@
 ---
 title: Strings in Nunjucks zusammenfassen
 date: 2024-10-11
+icon: nunjucks
 tags:
     - nunjucks
     - template
