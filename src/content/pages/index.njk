@@ -11,8 +11,8 @@ subline: "CSS und mehr"
     <div class="full-bleed full-bleed-color">
       <h2 class="container">Notizen</h2>
     </div>
-    {% for post in collections.notizen %}
-      {% if loop.first %}<ul reversed class="index-list">{% endif %}
+    {% for post in collections.notizenDescending %}
+      {% if loop.first %}<ul class="index-list">{% endif %}
         {% include "partials/link-list-item.njk" %}
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
@@ -21,7 +21,7 @@ subline: "CSS und mehr"
       <h2 class="container">Artikel</h2>
     </div>
     
-    {% for post in collections.article %}
+    {% for post in collections.articleDescending %}
       {% if loop.first %}<ul class="index-list">{% endif %}
         {% include "partials/link-list-item.njk" %}
       {% if loop.last %}</ul>{% endif %}
@@ -31,7 +31,7 @@ subline: "CSS und mehr"
       <h2 class="container">Linktipps</h2>
     </div>
 
-    {% for post in collections.linktipps %}
+    {% for post in collections.linktippsDescending %}
       {% if loop.first %}<ul class="index-list">{% endif %}
         {% include "partials/link-list-item.njk" %}
       {% if loop.last %}</ul>{% endif %}

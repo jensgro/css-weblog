@@ -6,8 +6,8 @@ bodyClass: notizen
 title: "Notizen"
 ---
 
-<ul>
-  {%- for p in collections.notizenDescending %}
-    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a> [{{ p.data.date  | htmlDateString }}]</li>
-  {%- endfor -%}
-</ul>
+{% for post in collections.notizenDescending %}
+  {% if loop.first %}<ul class="index-list">{% endif %}
+    {% include "partials/link-list-item.njk" %}
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

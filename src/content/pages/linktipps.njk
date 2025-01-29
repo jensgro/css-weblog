@@ -6,8 +6,8 @@ bodyClass: linktipps
 title: "Linktipps"
 ---
 
-<ul>
-  {%- for p in collections.linktippsDescending %}
-    <li><a href="{{ p.url | url}}">{{ p.data.title }}</a></li>
-  {%- endfor -%}
-</ul>
+{% for post in collections.linktippsDescending %}
+  {% if loop.first %}<ul class="index-list">{% endif %}
+    {% include "partials/link-list-item.njk" %}
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

@@ -1,5 +1,6 @@
 ---
 title: Die Pseudoklassen is() und where()
+icon: css
 date: 2024-11-01
 tags:
     - css

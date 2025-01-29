@@ -4,9 +4,14 @@
     display: grid;
     gap: 20px;
 
+    li {
+        display: flex;
+        gap: $space4;
+    }
+
     a {
         display: block;
-        font-size: rem(31);
+        font-size: rem(25);
         margin-block: $space05;
 
         &:hover, &:focus {
