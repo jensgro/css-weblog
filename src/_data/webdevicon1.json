@@ -1,0 +1,42 @@
+[
+    {
+        "name": "11ty",
+        "icon": "11ty"      
+    },
+    {
+        "name": "codepen",
+        "icon": "codepen"
+    },
+    {
+        "name": "css",
+        "icon": "css"
+    },    
+    {
+        "name": "css3",
+        "icon": "css3"
+    },
+    {
+        "name": "git",
+        "icon": "git"
+    },
+    {
+        "name": "html5",
+        "icon": "html5"
+    },
+    {
+        "name": "javascript",
+        "icon": "javascript"
+    },
+    {
+        "name": "nunjucks",
+        "icon": "nunjucks"
+    },
+    {
+        "name": "sass",
+        "icon": "sass"
+    },
+    {
+        "name": "code",
+        "icon": "code"
+    }
+]
