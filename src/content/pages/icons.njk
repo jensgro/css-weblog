@@ -1,0 +1,17 @@
+---
+layout: layouts/home.njk
+permalink: /icons.html
+eleventyExcludeFromCollections: true
+---
+<h1>Übersicht der Icons</h1>
+
+<h2>SVG-Icons webdev1.svg</h2>
+<ul class="iconlist">
+{% for item in webdevicon1 %}
+    <li>
+        <svg class="svg-icon svg-icon--medium"><use xlink:href="/assets/svg/webdev1.svg#{{item.icon}}"></use></svg>
+    </li>
+{% endfor %}
+</ul>
+
+
