@@ -1,4 +1,12 @@
 .svg-icon {
-    width: 32px;
-    height: 32px;
+    width: var(--svg-dimension, 32px);
+    height: var(--svg-dimension, 32px);
+}
+
+.svg-icon--medium {
+    --svg-dimension: 64px;
+}
+
+.svg-icon--large {
+    --svg-dimension: 128px;
 }
