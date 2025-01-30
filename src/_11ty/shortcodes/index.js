@@ -7,6 +7,7 @@ const details = require('./details');
 const aside = require('./aside');
 const codepenImg = require('./codepenImg');
 const svgSprite = require('./svgSprite');
+const baseline = require('./baseline');
 
 module.exports = {
   includeRaw,
@@ -15,5 +16,6 @@ module.exports = {
   details,
   aside,
   codepenImg,
-  svgSprite
+  svgSprite,
+  baseline
 };

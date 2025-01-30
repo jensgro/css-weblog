@@ -11,6 +11,10 @@ Selbstverständlich sollte jeder Frontend-Entwickler [caniuse](https://caniuse.c
 
 Eine andere Form der Darstellung und Aussenkommunikation bietet die [Baseline-Initiative](https://web-platform-dx.github.io/web-features/). Auf der [Übersichtsseite von Baseline](https://web.dev/baseline) werden die gemeinsam umgesetzten Features präsentiert. Die für jeden verfügbare [Webcomponent von Baseline](https://github.com/web-platform-dx/baseline-status) ist mittlerweile auch bei CanIUse und MDN eingebunden. Sie ermöglicht eine sehr schnelle Erfassung des Status Quo der Technik in den gängigen Evergreen Browsern.
 
+Die Webcomponente sieht folgendermaßen aus:
+
+{% baseline "subgrid" %}
+
 Ich habe mir zum Testen [einen Codepen](https://codepen.io/jensgro/pen/dPbKdzm) erstellt. Mir fehlen ehrlich gesagt zwei Informationen, die spätestens im Aufklapper existieren sollten: ab welcher Version eines Browsers die Technik unterstützt wird und welche Browserversion jeweils die aktuelle ist. Man kann es natürlich auch abkürzen und das Releasedatums der ersten unterstützenden Browserversion ausgeben.
 Dadurch könnte man abschätzen, wie groß die Verbreitung aktuell ist. Vielleicht kommt diese Ergänzung ja noch.
 
