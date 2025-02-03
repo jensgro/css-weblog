@@ -3,6 +3,10 @@
     height: var(--svg-dimension, 32px);
 }
 
+.svg-icon--small {
+    --svg-dimension: 16px;
+}
+
 .svg-icon--medium {
     --svg-dimension: 64px;
 }

@@ -13,7 +13,8 @@
   }
   
   &__subline {
-    font-size: rem(24);
+    //font-size: rem(24);
+    font-size: clamp(1.2rem,3.5vw,1.5rem);
   }
 
   &__headline-cnt {

@@ -2,17 +2,28 @@
 
 .index-list {
     display: grid;
-    gap: 20px;
+    gap: $space3;
 
+    @media screen and (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
     li {
         display: flex;
         gap: $space4;
     }
 
+    svg {
+        position: relative;
+        top: 4px;
+    }
+
     a {
         display: block;
-        font-size: rem(25);
-        margin-block: $space05;
+        font-size: rem(18);
+
+        @media screen and (min-width: $md) {
+            font-size: rem(20);
+        }
 
         &:hover, &:focus {
             color: get-color("red", "my");
