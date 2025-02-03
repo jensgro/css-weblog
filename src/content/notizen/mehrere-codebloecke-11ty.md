@@ -10,7 +10,7 @@ source:
        title: 11ty Github Issue
 ---
 
-Es kann sehr sinnvoll sein, keine Markdown-Dateien, sondern Nunjucks-Dateien zu erstellen und dann spezielle Nunjucks-Features zu nutzen.
+Es kann in 11ty sehr sinnvoll sein, keine Markdown-Dateien, sondern Nunjucks-Dateien zu erstellen und dann spezielle Nunjucks-Features zu nutzen.
 
 Wenn man in einer Nunjucks-Seite anstelle des Links zum Template im Frontmatter das Template "extended", dann kann man auf erweiterte Features zugreifen, die sonst nicht möglich sind.
 
@@ -19,7 +19,7 @@ Wenn man in einer Nunjucks-Seite anstelle des Links zum Template im Frontmatter 
 
 ```
 
-Dann kann man auch zwei oder mehr Contentblöcke in einer Seite nutzen:
+So kann man zwei oder mehr Contentblöcke in einer Seite nutzen:
 
 ```jsx
 {% raw %}---

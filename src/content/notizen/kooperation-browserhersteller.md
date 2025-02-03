@@ -5,7 +5,7 @@ tags:
   - browser
 ---
 
-Einer Kooperation der Browserhersteller haben wir HTML5 zu verdanken. Sie schlossen sich damals parallel zum W3C zusammen und entwickelten HTML weiter. Doch die Phase der startegischen Einigkeit währte nie lange, sie wiederholte sich allerdings immer wieder.
+Einer Kooperation der Browserhersteller haben wir HTML5 zu verdanken. Sie schlossen sich damals parallel zum W3C zusammen und entwickelten HTML weiter. Doch die Phase der strategischen Einigkeit währte nie lange, sie wiederholte sich allerdings immer wieder.
 
 Unterschiedliche Initiativen wurden gestartet und wieder eingestampft. Die neueste Kooperation geht wieder in eine andere Richtung als bisher und ist sowohl vielversprechend als auch hilfreich für uns Entwickler: Interop. Auch die Baseline-Idee von Google gehört m.E. dazu.
 
