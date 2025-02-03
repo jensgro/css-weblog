@@ -7,11 +7,15 @@ $site-footer-vars: (
 
 @include cssvars($site-footer-vars, ".site-footer-wrapper");
 
+.container:has(+ .site-footer-wrapper) {
+  margin-bottom: $space4;
+}
+
 .site-footer-wrapper {
   color: var(--site-footer-color);
   background-color: var(--site-footer-bg);
   padding: $space1;
-  margin-top: $space4;
+  margin-top: auto;
 }
 
 .site-footer {
