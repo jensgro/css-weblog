@@ -18,7 +18,10 @@ $tag-vars: (
   list-style: none;
   gap: 0.5rem;
 }
+
 .taglist__link {
+  display: flex;
+  align-items: center;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   background-color: var(--tag-link-bg-color);
@@ -28,6 +31,13 @@ $tag-vars: (
 
   &:hover, &:focus {
     background-color: var(--tag-link-hover-bg-color);
+  }
+
+  svg {
+    margin-left: $space1;
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
   }
 }
 
