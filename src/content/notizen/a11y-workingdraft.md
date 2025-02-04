@@ -6,7 +6,7 @@ tags:
     - a11y
 ---
 
-Der Podcast "Workingdraft" hat die ersten Folgen dieses Jahres komplett einem Thema verschrieben: der Barrierefreiheit (a11y)
+Der Podcast "[Workingdraft](https://workingdraft.de/)" hat die ersten Folgen dieses Jahres komplett einem Thema verschrieben: der Barrierefreiheit (a11y)
 
 Es sind sehr interessante Folgen dabei herausgekommen. Sie changieren zwischen niedrigschwelligem Einstieg und Infos für Profis. Ich bin den Kollegen (und Freunden) sehr dankbar, dass sie sich so konzentriert und facettenreich des Themas angenommen haben. Die Folgenliste: 
 
