@@ -8,6 +8,9 @@ $space6: $space1 * 6;
 $space7: $space1 * 7;
 $space8: $space1 * 8;
 $space05: $space1 * 0.5;
+$details-space: $space1;
+$tagspace: 0.25rem;
+$tagspace2: $tagspace * 2;
 
 // Gap for flexbox and grid
 $gap: 20px;
@@ -32,6 +35,7 @@ $systemfonts-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, mon
 $custom-colors: (
   "black": (
     "base": #000,
+    "light": "#313131",
     "lighter": "#212121"
   ),
   "white": (
@@ -80,6 +84,7 @@ $custom-colors: (
   ),
   "green": (
     "base": teal,
+    "nav": #259fb6,
     "medium": #12768c,
     "strong": #2f6b1b,
   )

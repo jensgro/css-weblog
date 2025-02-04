@@ -5,18 +5,50 @@
 $root-vars: (
   text-color: #{get-color("black", "lighter")},
   page-bg-color: #{get-color("white")},
-  linkColor: #{get-color("red", "my")},
   linkColorHover: #{color.adjust(get-color("red", "my"),$lightness: 10%)},
   code-bg: #{get-color("brown", "medium")},
   aside-bg: #{get-color("grey", "light")},
-  aside-after-bg: #{get-color("grey")},
-  card-img-border-color: #{get-color("grey")},
   details-border-color: #{get-color("grey", "darker")},
   full-bleed-bg: #a0cbe4,
-  full-bleed-color:  #{get-color("black", "lighter")}
+  full-bleed-color:  #{get-color("black", "lighter")},
+  main-nav-bg-color: transparent,
+  main-nav-item-text: #{get-color("black", "lighter")},
+  main-nav-active-bordercolor: #{get-color("green", "nav")},
+  main-nav-box-shadow: 2px 8px rgba(15, 18, 25, 0.05),
+  toggle-button-border: 1px solid #{get-color('black')},
+  site-footer-bg: #{get-color('green', 'medium')},
+  site-footer-color: #{get-color("white")},
+  tag-link-bg-color: #{get-color('green', 'medium')},
+  tag-link-hover-bg-color: #{get-color('green', 'strong')},
+  tag-link-color: #{get-color('white', 'nearly2')}
+);
+
+$root-vars-dark: (
+  text-color: #{get-color("white")},
+  page-bg-color: #{get-color("black", "light")},
+  linkColorHover: #{color.adjust(get-color("orange", "light"),$lightness: 10%)},
+  code-bg: #{get-color("red", "my")},
+  aside-bg: #{get-color("grey", "light")},
+  details-border-color: #{get-color("grey", "darker")},
+  full-bleed-bg: #{get-color("orange", "light")},
+  full-bleed-color:  #{get-color("black", "lighter")},
+  main-nav-bg-color: transparent,
+  main-nav-item-text: #{get-color("white")},
+  main-nav-box-shadow: 2px 8px rgba(222, 225, 231, 0.05),
+  main-nav-active-bordercolor: #{get-color("orange", "light")},
+  toggle-button-border: 1px solid #{get-color('white')},
+  site-footer-bg: #{get-color('green', 'medium')},
+  site-footer-color: #{get-color("white")},
+  tag-link-bg-color: #{get-color('green', 'medium')},
+  tag-link-hover-bg-color: #{get-color('green', 'strong')},
+  tag-link-color: #{get-color('white', 'nearly2')}
 );
 
 @include cssvars($root-vars);
+
+@media (prefers-color-scheme: dark) {
+  @include cssvars($root-vars-dark);
+}
 
 // A modified version of Andy Bell's "modern reset" https://github.com/hankchizljaw/modern-css-reset
 
@@ -31,12 +63,12 @@ $root-vars: (
 html {
   padding: 0;
   font-size: 16px;
+  color-scheme: dark light;
 }
 
 :where(html) {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: none;
-  color-scheme: dark light;
   tab-size: 2;
 }
 
@@ -49,7 +81,7 @@ html {
 body {
   font-family: "fira-sans", $systemfonts-sans-serif;
   font-weight: 500;
-  font-size: rem(18);
+  font-size: rem(20);
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--page-bg-color);
@@ -92,7 +124,7 @@ h5 {font-size: rem(20);}
 
 :where(:focus-visible) {
 	outline: 3px solid CanvasText;
-	box-shadow: 0 0 0 5px Canvas;
+	box-shadow: 0 0 0 $space1 Canvas;
 	outline-offset: 1px;
 }
 
@@ -110,7 +142,7 @@ h5 {font-size: rem(20);}
 }
 
 :where(li) {
-  margin-bottom: 4px;
+  margin-bottom: $space05;
 }
 
 /* ================ */
@@ -180,7 +212,7 @@ p code, li code {
   padding: 0.001em 0.4em;
   font-family: $systemfonts-mono;
   background: var(--code-bg);
-  border-radius: 8px;
+  border-radius: $space1;
 }
 li code {
   margin-right: $space05;
@@ -192,22 +224,22 @@ li:has( code ) {
 /* ==== details/summary ==== */
 details {
   border: 1px solid var(--details-border-color);
-  border-radius: 2px;
-  padding: 0.5em 0.5em 0;
+  border-radius: $space05;
+  padding: $details-space $details-space 0;
 }
 
 summary {
   font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
+  margin: ($details-space * -1) ($details-space * -1) 0;
+  padding: $details-space;
 }
 
 details[open] {
-  padding: 0.5em;
+  padding: $details-space;
 }
 
 details[open] summary {
-  margin-bottom: 0.5em;
+  margin-bottom: $details-space;
 }
 
 .details__content {

@@ -3,13 +3,13 @@
 .codepen-overview {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: $gap;
 }
 
 .codepen-list-wrapper {
-  margin-block: 40px;
+  margin-block: $space6;
 }
 .codepenlist {
   columns: 2;
-  column-gap: 20px;
+  column-gap: $gap;
 }

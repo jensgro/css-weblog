@@ -1,10 +1,4 @@
 @use "../config" as *;
-$tag-vars: (
-  tag-link-bg-color: #{get-color('green', 'medium')},
-  tag-link-hover-bg-color: #{get-color('green', 'strong')},
-  tag-link-color: #{get-color('white', 'nearly2')},
-);
-@include cssvars($tag-vars, ".tags");
 
 .tags {
   margin-top: $space4;
@@ -16,14 +10,14 @@ $tag-vars: (
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 0.5rem;
+  gap: $tagspace2;
 }
 
 .taglist__link {
   display: flex;
   align-items: center;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  padding: $tagspace $tagspace2;
+  border-radius: $space1;
   background-color: var(--tag-link-bg-color);
   color: var(--tag-link-color);
   text-decoration: none;
@@ -43,9 +37,9 @@ $tag-vars: (
 
 .list-item-tag {
   display: inline-block;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0.025rem 0.25rem;
-  border-radius: 0.25rem;
+  margin: 0 $tagspace2 $tagspace2 0;
+  padding: 0.025rem $tagspace;
+  border-radius: $tagspace;
   background-color: var(--tag-link-bg-color);
   color: var(--tag-link-color);
 
