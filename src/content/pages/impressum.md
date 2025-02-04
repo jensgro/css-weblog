@@ -4,7 +4,18 @@ permalink: /impressum.html
 title: Impressum
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam ab minima ullam itaque sequi explicabo dolore vitae repellat, perspiciatis quaerat impedit veniam cupiditate eligendi rerum voluptas necessitatibus ut optio.
+## Angaben gemäß § 5 TMG
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam ab minima ullam itaque sequi explicabo dolore vitae repellat, perspiciatis quaerat impedit veniam cupiditate eligendi rerum voluptas necessitatibus ut optio.
+Jens Grochtdreis
+Am Königsfloß 7a
+55252 Mainz-Kastel
+jens@grochtdreis.de
+Tel.: 0172 – 56 15 752
 
+## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+
+Jens Grochtdreis
+Am Königsfloß 7a
+55252 Mainz-Kastel
+jens@grochtdreis.de
+Tel.: 0172 – 56 15 752
