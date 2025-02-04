@@ -15,26 +15,6 @@
   color: var(--full-bleed-color);
 }
 
-.bg-wrapper {
-  background-color: get-color(grey);
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.mb-4 {
-  margin-bottom: $space4;
-}
-
-.mt-4 {
-  margin-top: $space4;
-}
-
 .only-print {
   display: none;
 }
