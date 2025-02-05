@@ -1,5 +1,5 @@
 <header class="main-nav no-print">
-  <nav class="container">
+  <div class="nav container">
     <a href="/index.html"><img class="main-nav__logo" src="{{'/assets/img/logo/jg-logo-48x48.png' | url}}" alt="Logo von Jens Grochtdreis"></a>
     <span class="main-nav__site-title"><a href="/index.html">CSS-Weblog</a></span>
     <button class="main-nav__toggle-button" popovertarget="mainnav">
@@ -10,16 +10,16 @@
       </svg>
   Menü</button>
     
-    <div id="mainnav" class="main-nav__content" popover>
+    <nav id="mainnav" class="main-nav__content" popover>
       <button class="main-nav__close-button" popovertarget="mainnav" popovertargetaction='hide'>Menü schließen</button>
       <ul class="main-nav__nav">
         {%- for entry in mainnavigation %}
           <li  class="main-nav__item">
-            <a  class="main-nav__link{% if entry.class == bodyClass %} main-nav__link--active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}  </a>
+            <a  class="main-nav__link{% if entry.class in bodyClass %} main-nav__link--active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}  </a>
           </li>
         {%- endfor %}
         </ul>
-    </div>
+    </nav>
     
-  </nav>
+  </div>
 </header>
