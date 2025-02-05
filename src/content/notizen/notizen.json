@@ -1,6 +1,6 @@
 {
   "layout": "layouts/post.njk",
   "permalink": "notizen/{{title | slugify}}.html",
-  "bodyClass": "notizen",
+  "bodyClass": "notizen post",
   "headerClass": "notizen"
 }

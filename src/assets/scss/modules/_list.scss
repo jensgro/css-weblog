@@ -5,5 +5,9 @@
 
     li {
         margin-bottom: $space2;
+
+        &::marker {
+            color: var(--list-marker-color);
+        }
     }
 }

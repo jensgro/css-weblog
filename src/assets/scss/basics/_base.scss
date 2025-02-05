@@ -20,7 +20,8 @@ $root-vars: (
   site-footer-color: #{get-color("white")},
   tag-link-bg-color: #{get-color('green', 'medium')},
   tag-link-hover-bg-color: #{get-color('green', 'strong')},
-  tag-link-color: #{get-color('white', 'nearly2')}
+  tag-link-color: #{get-color('white', 'nearly2')},
+  list-marker-color: #{get-color('red', 'my')}
 );
 
 $root-vars-dark: (
@@ -41,7 +42,8 @@ $root-vars-dark: (
   site-footer-color: #{get-color("white")},
   tag-link-bg-color: #{get-color('green', 'medium')},
   tag-link-hover-bg-color: #{get-color('green', 'strong')},
-  tag-link-color: #{get-color('white', 'nearly2')}
+  tag-link-color: #{get-color('white', 'nearly2')},
+  list-marker-color: #{get-color('orange', 'light')}
 );
 
 @include cssvars($root-vars);
