@@ -40,3 +40,5 @@ Mittlerweile geht das auch wesentlich kürzer:
   inset: 50px 0 0 20%;
 }
 {% endhighlight %}
+
+{% baseline "inset" %}

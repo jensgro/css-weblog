@@ -37,6 +37,3 @@ p {
   @include textclamp($num_of_lines: 5);
 }
 {% endhighlight %}
-
-
-

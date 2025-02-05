@@ -58,3 +58,5 @@ body {
     --_btn-border-radius: 100%;
 }
 {% endhighlight %}
+
+{% baseline "custom-properties" %}

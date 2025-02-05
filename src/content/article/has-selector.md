@@ -61,3 +61,4 @@ figure:has(figcaption) {
 }
 {% endhighlight %}
 
+{% baseline "has" %}

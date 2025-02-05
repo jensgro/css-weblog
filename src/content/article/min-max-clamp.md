@@ -20,6 +20,9 @@ Die ``min()``-Funktion bildet den **minimalen** Wert aus einer Auswahl von zwei 
 
 **Der kleinste Wert** von beiden wird gewählt. Das Modul soll **maximal** 500px breit sein. Hier ist eine [Codepen-Demo des Prinzips](https://codepen.io/una/pen/rNeGNVL).
 
+{% baseline "css-math-functions" %}
+
+
 Die ``max()``-Funktion wählt den **maximalen** Wert aus einer Auswahl von zwei Werten.
 
 {% highlight "css" %}
@@ -43,6 +46,8 @@ Man kann es auch konfigurierbar und ein wenig schwer lesbar machen:
 
 Ein [Codepen](https://codepen.io/una/pen/RwaZXqR) demonstriert das Prinzip.
 
+{% baseline "max" %}
+
 
 Die ``clamp()``-Funktion vereint die beiden eben vorgestellten. Ich finde sie pfiffig, nützlich, aber nicht intuitiv nutzbar.
 
@@ -58,3 +63,5 @@ p {
 {% endhighlight %}
 
 Wichtig ist, dass die Idealgröße die notwendige Flexibilität und Dynamik bringt. Hier kann und sollte man mit den unterschiedlichen relativen Einheiten experimentieren. Man kann mit ``vw`` einen Bezug zur Browserbreite machen, aber auch einfach nur schlichte Prozentwerte nehmen. Hier sollte man intensiv experimentieren.
+
+{% baseline "clamp" %}

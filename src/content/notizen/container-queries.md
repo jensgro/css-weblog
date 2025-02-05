@@ -36,3 +36,5 @@ Der Bezugsrahmen wird vom Browserfenster auf eine frei definierbare Komponente e
   }
 }
 {% endhighlight %}
+
+{% baseline "container-query" %}
