@@ -6,14 +6,25 @@ tags:
     - css
     - selektoren
     - basics
-source:
-    - url: https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/inset
-      title: SELFHTML
+sources:
+    - title: the :where() and :is() pseudo-classes
+      url: https://www.matuzo.at/blog/2022/100daysof-day13
+    - title: The difference between :is() and :where()
+      url: https://www.matuzo.at/blog/2022/100daysof-day14/
+    - title: Codepen von Manuel
+      url: https://codepen.io/matuzo/pen/abGVjop
+    - title: Ein Codepen von mir
+      url: https://codepen.io/jensgro/pen/jOjXjbg?editors=0100
+    - title: Der :where-Selektor als Teil eines Base-CSS
+      url: https://gist.github.com/jensgro/aacb7d941f68b1e8757627fbdbad662f
+    - title: Sehr kompakte Schreibweise mit :is()
+      url: https://codepen.io/jensgro/full/mdZgmXV
 
 ---
 Flexbox und CSS-Grid revolutionierten unseren Umgang mit dem Layout, schufen neue Möglichkeiten. Die Einführung der  drei Pseudoklassen ``:where()``, ``:is()`` und ``:has()`` packe ich in eine ähnliche Kategorie. Diese neuen Pseudoklassen können unsere Codebasis erheblich verschlanken und unseren Code lesbarer machen. Schauen wir uns die ersten beiden einmal in Beispielen an.
 
 Früher schrieben wir beispielsweise:
+
 {% highlight "css" %}
 .teaser > header,
 .teaser > footer,
@@ -21,6 +32,7 @@ Früher schrieben wir beispielsweise:
 	color: red;
 }
 {% endhighlight %}
+
 Das geht jetzt folgendermassen kürzer:
 
 {% highlight "css" %}
@@ -50,4 +62,19 @@ ul[class] { color: red; }
 /* ==== böser Trick :-) */
 /* 1,0,0 */
 :is(ul[class], #michGibtEsNicht) { color: red; }
+{% endhighlight %}
+
+Weitere interessante Beispiele sind:
+
+{% highlight "css" %}
+:is(h1, h2, h3) {
+	color: green;
+}
+:where(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+:where(button) {
+  all : unset;
+}
 {% endhighlight %}

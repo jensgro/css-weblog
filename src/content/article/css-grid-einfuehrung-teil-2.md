@@ -1,6 +1,7 @@
 ---
 title: Einführung in CSS-Grid (Teil 2)
 icon: css
+eleventyExcludeFromCollections: true
 lead: Nachdem wir uns die Grundidee angeschaut haben, wollen wir nun unser erstes eigenes Grid erstellen.
 date: 2024-05-02
 tags:

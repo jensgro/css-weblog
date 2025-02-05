@@ -15,7 +15,7 @@
       <ul class="main-nav__nav">
         {%- for entry in mainnavigation %}
           <li  class="main-nav__item">
-            <a  class="main-nav__link{% if entry.class in bodyClass %} main-nav__link--active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}  </a>
+            <a  class="main-nav__link{% if entry.class == bodyClass %} main-nav__link--active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}  </a>
           </li>
         {%- endfor %}
         </ul>
