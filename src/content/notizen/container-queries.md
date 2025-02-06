@@ -4,22 +4,20 @@ icon: css
 date: 2025-02-01
 tags:
     - css
+sources:
+  - title: An Interactive Guide to CSS Container Queries
+    url: https://ishadeed.com/article/css-container-query-guide/
+  - title: A Friendly Introduction to Container Queries
+    url: https://www.joshwcomeau.com/css/container-queries-introduction/
+  - title: Container Queries - The inevitable end of mobile first
+    url: https://beyond-the-cascade.com/the-inevitable-end-of-mobile-first/
 ---
 
-Das Layout von Seitenelementen/Modulen ist bislang immer in Abhängigkeit von der Seitenbreite.
-Eigentlich sollte das Modul aber auf den unmittelbar verfügbaren Platz reagieren, nicht auf das Browserfenster.
+Das Layout von Seitenelementen/Modulen ist bislang immer in Abhängigkeit von der Seitenbreite. Eigentlich sollte das Modul aber auf den unmittelbar verfügbaren Platz reagieren, nicht auf das Browserfenster.
 
-Das geht jetzt mit Container Queries.
+Das geht jetzt mit Container Queries. Die gängigen Browser unterstützen alle diese Technik.
 
-[An Interactive Guide to CSS Container Queries](https://ishadeed.com/article/css-container-query-guide/)
-
-
-Die gängigen Browser unterstützen alle diese Technik.
-
-![Screenshot von Can I Use zu Container Queries](caniuse-container-queries.png)
-
-[CanIUse](https://caniuse.com/css-container-queries)
-
+{% baseline "container-queries" %}
 
 Der Bezugsrahmen wird vom Browserfenster auf eine frei definierbare Komponente einer Seite verschoben.
 
@@ -37,4 +35,3 @@ Der Bezugsrahmen wird vom Browserfenster auf eine frei definierbare Komponente e
 }
 {% endhighlight %}
 
-{% baseline "container-queries" %}
