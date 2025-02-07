@@ -1,12 +1,22 @@
 [
   {
-    "name": "A11y Matters",
-    "url": "https://www.a11ymatters.com/"
+    "title": "Techniken zum Verstecken von Inhalten",
+    "url": "https://practical-accessibility.today/code/hiding-techniques/",
+    "info": "tabellarische Übersicht von Sara Soueidan"
   },  {
-    "name": "Techniken zum Verstecken von Inhalten",
-    "url": "https://practical-accessibility.today/code/hiding-techniques/"
-  },  {
-    "name": "A11y without disabilities",
-    "url": "https://yatil.net/blog/no-accessibility-without-disabilities"
+    "title": "A11y without disabilities",
+    "url": "https://yatil.net/blog/no-accessibility-without-disabilities",
+    "info": "Blogpost von @yatil"
+  },
+  {
+    "title": "AI won't solve accessibility",
+    "url": "https://yatil.net/blog/ai-wont-solve-accessibility",
+    "info": "Blogpost von @yatil"
+  },
+  {
+    "title": "A11y Project",
+    "url": "https://www.a11yproject.com/",
+    "info": "umfangreiche Sammlung von Informationen und Tools"
   }
+  
 ]

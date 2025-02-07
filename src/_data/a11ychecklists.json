@@ -1,0 +1,42 @@
+[
+    {
+        "title": "How to Meet WCAG (Quick Reference)",
+        "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+        "info": "Vom W3C - häßlich, nützlich, die Basis von allem"
+      },
+    {
+        "title": "A11y Checklist",
+        "url": "https://www.a11yproject.com/checklist/",
+        "info": "umfangreich und schön gestaltet"
+      },
+      {
+        "title": "A11y Checklist for Teams",
+        "url": "https://accessibility-for-teams.com/",
+        "info": "A11y-Tipps für Designer und Produkt Manager, leider immer noch nicht für Entwickler."
+      },
+      {
+        "title": "A11y Not-Checklist",
+        "url": "https://not-checklist.intopia.digital/",
+        "info": "Die Ausgabe ist u.a. nach Job-Rollen konfigurierbar."
+      },
+      
+      {
+        "title": "Web Accessibility Checklist",
+        "url": "https://webaccessibilitychecklist.com/",
+        "info": "Diese Checkliste ist niocht besonders umfangreich. Aber dadurch nimmt sie auch ein wenig Furcht vor der Aufgabe."
+      },
+      {
+        "title": "Web Accessibility Simplified",
+        "url": "https://thisiswcag.com/"
+      },     
+      {
+        "title": "Designing accessible services",
+        "url": "https://ukhomeoffice.github.io/accessibility-posters",
+        "info": "Das Britische Innenmisterium informiert über A11y für unterschiedliche Behinderungen. Gibt es auch als Poster zum Download."
+      },
+      {
+        "title": "A11y-Cheatsheet",
+        "url": "https://moritzglantz.de/accessibility-cheatsheet/",
+        "info": "Das legendäre A11y-Cheatsheet von Moritz Glantz"
+      }
+]

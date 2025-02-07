@@ -22,7 +22,8 @@ $root-vars: (
   tag-link-hover-bg-color: #{get-color('green', 'strong')},
   tag-link-color: #{get-color('white', 'nearly2')},
   list-marker-color: #{get-color('red', 'my')},
-  aside-source-border: var(--tag-link-bg-color)
+  aside-source-border: var(--tag-link-bg-color),
+  linklist-background-color: #{get-color('grey', 'light')}
 );
 
 $root-vars-dark: (
@@ -45,7 +46,8 @@ $root-vars-dark: (
   tag-link-hover-bg-color: #{get-color('green', 'strong')},
   tag-link-color: #{get-color('white', 'nearly2')},
   list-marker-color: #{get-color('orange', 'light')},
-  aside-source-border: var(--tag-link-bg-color)
+  aside-source-border: var(--tag-link-bg-color),
+  linklist-background-color: #{get-color('grey', 'light')}
 );
 
 @include cssvars($root-vars);

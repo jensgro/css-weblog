@@ -5,9 +5,16 @@
   <svg class="svg-icon" role="img" aria-hidden="true"><use xlink:href="/assets/svg/webdev1.svg#code"></use></svg>
   {% endif %}
   <span>
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      {% if post.data.date %}
       <span class="list-item-meta">
         {{ post.data.date | htmlDateString }}
       </span>
+      {% endif %}
+      {% if post.data.info %}
+      <span class="list-item-meta">
+        {{ post.data.info }}
+      </span>
+      {% endif %}
   </span>
 </li>
