@@ -5,11 +5,6 @@
         "url": "/"
     },
     {
-        "title": "Archiv",
-        "class": "notizen",
-        "url": "/archiv"
-    },
-    {
         "title": "Linktipps",
         "class": "linktipps",
         "url": "/linktipps"

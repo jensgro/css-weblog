@@ -1,0 +1,70 @@
+@use "../config" as *;
+
+
+.main-nav {
+  box-shadow:  var(--main-nav-box-shadow);
+
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__logo {
+    width: 48px;
+    height: 48px;
+    margin-right: $space6;
+  }
+
+  &__site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__content {
+    margin-left: auto;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space2;
+    padding-inline: $space1;
+    // margin-block: $space2;
+    margin-block: 0;
+    margin-left: auto;
+  }
+
+  &__item {
+    color: var(--main-nav-item-text);
+    text-transform: capitalize;
+
+    &:nth-child(1) {
+      margin-right: auto;
+    }
+
+  }
+
+  &__link {
+    display: inline-block;
+    color: currentColor;
+    text-decoration: 5px underline var(--main-nav-bg-color);
+    text-underline-offset: $space1;
+    padding: $space1 $space4;
+    transition: text-decoration 0.5s ease;
+
+    &:hover,
+    &:focus,
+    &--active {
+      --main-nav-bg-color: var(--main-nav-active-bordercolor);
+    }
+
+    &--active {
+      font-weight: 700;
+    }
+  }
+}
+
+body.index .main-nav__site-title {
+  display: none;
+}
+

@@ -12,7 +12,7 @@ subline: "CSS und mehr"
       <h2 class="container">Notizen</h2>
     </div>
     {% for post in collections.notizenDescending %}
-      {% if loop.first %}<ul class="index-list">{% endif %}
+      {% if loop.first %}<ul class="index-list">{% endif %}       
         {% include "partials/link-list-item.njk" %}
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
