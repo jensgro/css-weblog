@@ -1,7 +1,7 @@
 ---
 title: Einführung in CSS-Grid (Teil 1)
 icon: css
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 lead: Mit Flexbox gibt es ein erstes, echtes Layoutmodul in CSS. Vorher behalfen wir uns mit Techniken, die für Seitenlayouts nur bedingt geeignet und nie gedacht waren. Mit CSS-Grids wurde kurz danach eine zweite Layouttechnik eingeführt, die von allen modernen Browsern unterstützt wird.
 date: 2024-05-01
 tags:

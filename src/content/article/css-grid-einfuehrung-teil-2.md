@@ -1,7 +1,7 @@
 ---
 title: Einführung in CSS-Grid (Teil 2)
 icon: css
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 lead: Nachdem wir uns die Grundidee angeschaut haben, wollen wir nun unser erstes eigenes Grid erstellen.
 date: 2024-05-02
 tags:
@@ -249,11 +249,11 @@ In der Funktion ``minmax()`` darf die Einheit ``fr`` nur als Maximalwert, nicht 
     </figcaption>
 </figure>
 
-<aside>
-<p>Ausserhalb von CSS-Grid haben die Funktionen <code>min()</code>, <code>max()</code> und <code>clamp()</code> mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen <a href="https://ishadeed.com/article/css-min-max-clamp/">Einführungsartikel</a> geschrieben. In einem späteren Artikel kümmert er sich um <a href="https://ishadeed.com/article/use-cases-css-comparison-functions/">Anwendungsfälle</a> dieser Funktionen.</p>
+{% aside %}
+<p>Auch ausserhalb von CSS-Grid haben die Funktionen <code>min()</code>, <code>max()</code> und <code>clamp()</code> für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen <a href="https://ishadeed.com/article/css-min-max-clamp/">Einführungsartikel</a> geschrieben. In einem späteren Artikel kümmert er sich um <a href="https://ishadeed.com/article/use-cases-css-comparison-functions/">Anwendungsfälle</a> dieser Funktionen.</p>
 
 <!-- Ausserhalb von CSS-Grid haben die Funktionen ``min()``, ``max()`` und ``clamp()`` mittlerweile für Begeisterung gesorgt. Ahmad Shadeed hat dazu einen tollen und ausführlichen [Einführungsartikel](https://ishadeed.com/article/css-min-max-clamp/) geschrieben. In einem späteren Artikel kümmert er sich um [Anwendungsfälle](https://ishadeed.com/article/use-cases-css-comparison-functions/) dieser Funktionen. -->
-</aside>
+{% endaside %}
 
 ## Autofit und Autofill
 
@@ -336,10 +336,10 @@ Nachdem die Bereiche des Grids benannt worden sind, müssen diese noch mit Inhal
 
 {% figImg "css-grid/grid-area-1.png", "Die Inhalte sind den passenden Grid-Areas zugewiesen." %}
 
-<aside>
+{% aside %}
 <p>Der interessante Nebeneffekt dieser Technik ist, dass die Darstellung unabhängig von der Codereihenfolge ist. Der Browser weiß schließlich, welche Container in welchen Bereich des Grids sollen. Dies ist besonders praktisch für <a href="https://codepen.io/jensgro/full/GyjpMM">unterschiedliche Breakpoints einer responsiven Seite</a>. Zu lässig sollte man aber mit dieser Technik nicht umgehen. Denn wie bei der Flexbox-Eigenschaft <code>order</code> steht die große visuelle Kontrolle im Konflikt mit der Usability und Accessibility. Seitenbereiche, die ich visuell an anderer Stelle darstelle, als sie nach der Codereihenfolge sein sollten, sollten keine interaktiven Elemente besitzen, die mit der Tastatur fokussiert werden können. Genauer: es sollten sich keine Buttons, Links, Formularelemente darin befinden. Die Tabreihenfolge richtet sich nach der Codereihenfolge, nicht nach der visuellen.</p>
 <p>Deshalb sind solche Umschichtungen in meinen Augen nur dann sinnvoll, wenn sie auf einer rein mobilen Darstellung angewendet werden. Auf dem Smartphone tabbe ich nicht nicht durch die Gegend.</p>
-</aside>
+{% endaside %}
 
 Die Anzahl der Namen mit der Anzahl der zur Verfügung stehenden Grid-Items pro visueller Zeile übereinstimmen muss. Eventuell gewünschte Auslassungen werden mit einem Punkt realisiert:
 
@@ -454,7 +454,7 @@ Wir sollten allerdings die alten, traditionellen Techniken nicht vergessen. Sie 
 
 Es ist zudem ein Irrtum, dass CSS-Grids alle anderen Techniken ersetzen. Jede Technik hat ihre Berechtigung, ihre Vor- und Nachteile. CSS-Grids füllen eine Lücke, die vorher nur mit Müh und Not mit Hilfe von dazu nicht primär nicht gedachten Techniken gestopft wurde. Grids können in sehr vielen Situationen ihre Stärken ausspielen.
 
-<aside>
+{% aside %}
 
 ## Informationsquellen
 
@@ -469,7 +469,7 @@ Bei CSS-Tricks gibt es den [A Complete Guide to CSS Grid](https://css-tricks.com
 Oder sind ein paar Videotutorials gefällig? Dann sind die 25 Lektionen von Wes Bos sicher eine gute Empfehlung. Der Kanadier hat – von Mozilla finanziert – seinen [kostenlosen und umfangreichen Kurs](https://cssgrid.io) Anfang 2018 veröffentlicht. Inhaltlich kann daran aber kein Vergang sein. Konkrete praktische Fragen geht Jen Simmons in ihrer Videocast-Serie [Layoutland](https://goo.gl/Bw5DAq) auf Youtube an.
 
 [Griddy](https://griddy.io/) ist ein Online-Tool, mit dem man sich ein Grid zusammenklicken kann. Natürlich mit Codeausgabe. Spielerisch kann man sich dem Thema im [Grid Garden](http://cssgridgarden.com/#de) nähern.
-</aside>
+{% endaside %}
 
 ## Fazit
 

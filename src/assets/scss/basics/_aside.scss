@@ -1,23 +1,30 @@
 @use "../config" as *;
 
 aside {
-  padding: $space4;
-  padding-top: $space6;
-  margin: $space4 0;
-  background-color: var(--aside-bg);
+  padding: var(--aside-padding-block, #{$space6}) var(--aside-padding-inline, #{$space6})  #{$space2} ;
+  margin: var(--aside-margin-block, #{$space4}) var(--aside-margin-inline, 0);
+  background-color: var(--aside-bg, #ccc);
   position: relative;
+ 
+  h2, h3 {
+    margin-top: $space1;
+  }
+}
 
+
+aside.aside {
   &::before {
     content: "Auch interessant";
-    display: inline-block;
     padding: $space1;
-    background-color: var(aside-after-bg);
+    background-color: var(--aside-after-bg, #fff);
     font-size: rem(14);
     position: absolute;
     top: 0;
     right: 0;
   }
-  h2, h3 {
-    margin-top: $space1;
-  }
+}
+
+.source, .sources {
+  --aside-padding-block: #{$space4};
+  border-left: 12px solid var(--aside-source-border, #333);
 }
