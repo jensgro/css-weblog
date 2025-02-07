@@ -1,5 +1,6 @@
 {
   "layout": "layouts/article.njk",
   "permalink": "artikel/{{title | slugify}}.html",
-  "bodyClass": "article"
+  "bodyClass": "article",
+  "eleventyExcludeFromCollections": true
 }
