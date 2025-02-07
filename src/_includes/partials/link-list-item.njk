@@ -4,17 +4,21 @@
   {% else %}
   <svg class="svg-icon" role="img" aria-hidden="true"><use xlink:href="/assets/svg/webdev1.svg#code"></use></svg>
   {% endif %}
-  <span>
+  <div>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       {% if post.data.date %}
-      <span class="list-item-meta">
+      <div>
         {{ post.data.date | htmlDateString }}
-      </span>
+      </div>
       {% endif %}
+      {% if post.data.updated %}
+      <div>Letztes Update: {{post.data.updated | htmlDateString}}</div>
+      {% endif %}
+      
       {% if post.data.info %}
-      <span class="list-item-meta">
+      <div>
         {{ post.data.info }}
-      </span>
+      </div>
       {% endif %}
-  </span>
+  </div>
 </li>
