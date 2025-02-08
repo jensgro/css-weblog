@@ -1,0 +1,36 @@
+[
+    {
+        "title": "A Friendly Introduction to Container Queries",
+        "url": "https://www.joshwcomeau.com/css/container-queries-introduction/",	
+        "info": "Eine sehr schön gestaltete, interaktive Einführung von Josh W. Comeau."
+    },
+    {
+        "title": "An Interactive Guide to CSS Container Queries",
+        "url": "https://ishadeed.com/article/css-container-query-guide",	
+        "info": "Eine sehr schön gestaltete, interaktive Einführung von Ahmad Shadeed."
+    },
+    {
+        "title": "Container queries land in stable browsers",
+        "url": "https://web.dev/blog/cq-stable",	
+        "info": "Una Cravets im Google Blog"
+    },
+    {
+        "title": "Container Queries - The inevitable end of mobile first",
+        "url": "https://beyond-the-cascade.com/the-inevitable-end-of-mobile-first/"
+    },
+    {
+        "title": "How to use container queries now",
+        "url": "https://web.dev/blog/how-to-use-container-queries-now",	
+        "info": "Philip Walton im Google Blog"
+    },
+    {
+        "title": "Misleading Container Queries",
+        "url": "https://dbushell.com/2024/09/23/misleading-container-queries/",	
+        "info": "David Bushell diskutiert einen Fall, in dem man mit Container Queries in Probleme laufen kann."
+    },
+    {
+        "title": "What Are CSS Container Style Queries Good For?",
+        "url": "https://www.smashingmagazine.com/2024/06/what-are-css-container-style-queries-good-for/",	
+        "info": ""
+    }
+]
