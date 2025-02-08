@@ -10,6 +10,7 @@
         border-radius: 6px;
     
     &:nth-child(odd){
+        color: var(--linklist-color);
         background-color: var(--linklist-background-color);
     }
     }

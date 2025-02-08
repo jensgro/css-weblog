@@ -8,6 +8,7 @@ $root-vars: (
   linkColorHover: #{color.adjust(get-color("red", "my"),$lightness: 10%)},
   code-bg: #{get-color("brown", "medium")},
   aside-bg: #{get-color("grey", "light")},
+  aside-color: #{get-color("black", "light")},
   details-border-color: #{get-color("grey", "darker")},
   full-bleed-bg: #a0cbe4,
   full-bleed-color:  #{get-color("black", "lighter")},
@@ -23,7 +24,8 @@ $root-vars: (
   tag-link-color: #{get-color('white', 'nearly2')},
   list-marker-color: #{get-color('red', 'my')},
   aside-source-border: var(--tag-link-bg-color),
-  linklist-background-color: #{get-color('grey', 'light')}
+  linklist-background-color: #{get-color('grey', 'light')},
+  linklist-color: #{get-color('black', 'light')}
 );
 
 $root-vars-dark: (
@@ -32,6 +34,7 @@ $root-vars-dark: (
   linkColorHover: #{color.adjust(get-color("orange", "light"),$lightness: 10%)},
   code-bg: #{get-color("red", "my")},
   aside-bg: #{get-color("grey", "light")},
+  aside-color: #{get-color("black", "light")},
   details-border-color: #{get-color("grey", "darker")},
   full-bleed-bg: #{get-color("orange", "light")},
   full-bleed-color:  #{get-color("black", "lighter")},
@@ -47,7 +50,8 @@ $root-vars-dark: (
   tag-link-color: #{get-color('white', 'nearly2')},
   list-marker-color: #{get-color('orange', 'light')},
   aside-source-border: var(--tag-link-bg-color),
-  linklist-background-color: #{get-color('grey', 'light')}
+  linklist-background-color: #{get-color('grey', 'light')},
+  linklist-color: #{get-color('black', 'light')}
 );
 
 @include cssvars($root-vars);

@@ -3,6 +3,7 @@
 aside {
   padding: var(--aside-padding-block, #{$space6}) var(--aside-padding-inline, #{$space6})  #{$space2} ;
   margin: var(--aside-margin-block, #{$space4}) var(--aside-margin-inline, 0);
+  color: var(--aside-color);
   background-color: var(--aside-bg, #ccc);
   position: relative;
  
