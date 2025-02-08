@@ -5,7 +5,7 @@ icon: css
 sources: 
     - title: Codepen
       url: https://codepen.io/jensgro/pen/MWxxRBb
-    - title: Artikel über alle drei Funktionen
+    - title: Artikel von Ahmad Shadeed über alle drei Funktionen
       url: https://ishadeed.com/article/css-min-max-clamp/
     - title: Codepen-Demo des Prinzips
       url: https://codepen.io/una/pen/bGpoGdJ
@@ -45,7 +45,7 @@ Man kann es auch konfigurierbar und ein wenig schwer lesbar machen:
 Ein [Codepen](https://codepen.io/una/pen/RwaZXqR) demonstriert das Prinzip.
 
 
-Die ``clamp()``-Funktion vereint die beiden eben vorgestellten. Ich finde sie pfiffig, nützlich, aber nicht intuitiv nutzbar.
+Die ``clamp()``-Funktion vereint die beiden eben vorgestellten. Ich finde sie pfiffig, nützlich, aber nicht intuitiv nutzbar. Die beiden bisherigen Funktionen hatten zwei Werte. Die Funktion ``clamp()`` hat drei. Der erste Wert ist der Minimalwert, der dritte Wert der Maximalwert. Der mittlere Wert ist ein idealer Wert. Dieser Wert muss flexibel sein, damit diese Funktion einen Sinn hat. Hier können wir uns also experimentell mit relativen Werten austoben. Dabei sollten wir darauf achten, wie der mittlere Wert dazu beiträgt, dass zwischen den beiden extremen skaliert wird.
 
 {% highlight "css" %}
 /* clamp( minimum,  ideal,  maximum ) */

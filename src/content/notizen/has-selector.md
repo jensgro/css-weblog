@@ -11,9 +11,7 @@ sources:
     - title: Codepen-Demo für das figure-Beispiel
       url: https://codepen.io/jensgro/pen/LYKvyXY
 ---
-Mit dem ``has()``-Selektor bekommen wir endlich sowas ähnliches wie einen Parent-Selektor. 
-
-Wir können nun bspw. ein Formular selektieren, in dem ein Eingabefeld fokussiert wurde oder das deaktivierte Eingabefelder besitzt.
+Mit dem ``has()``-Selektor bekommen wir endlich sowas ähnliches wie einen Parent-Selektor. Es muss aber nicht als solcher benutzt werden. Ein Element wird durch die Bedingung innerhalb dieses neuen Selektors definiert. Wir können nun bspw. ein Formular selektieren, in dem ein Eingabefeld fokussiert wurde oder das deaktivierte Eingabefelder besitzt.
 
 {% highlight "css" %}
 form:has(input:focused) {
@@ -25,16 +23,15 @@ label:has(+ input:disabled)) {
 }
 {% endhighlight %}
 
-Viele unterschiedliche Kombinationen sind mit diesem Selektor möglich.
+Viele unterschiedliche Kombinationen sind mit diesem Selektor möglich. So kann ich eine Headline selektieren, auf die direkt ein Absatz folgt und die sich in einem Konstrukt mit Klasse .card befindet.
 
 {% highlight "css" %}
 .card h2:has(+ p) {}
+{% endhighlight %}
 
+Oder einen Footer, der entweder eine Klasse .broadcastinfo hat oder ein Element mit dieser Klasse in sich hat.
+{% highlight "css" %}
 footer:has(.broadcastinfo) {}
-
-a:has(.lead) {}
-
-.media-liveblog:has(.topline) .topline:before {}
 {% endhighlight %}
 
 Sehr interessant ist auch die Möglichkeit, externe Styles in Abhängigkeit von Inline-Styles zu definieren:
@@ -43,7 +40,7 @@ Sehr interessant ist auch die Möglichkeit, externe Styles in Abhängigkeit von 
 .teaser:has(.topline[style="display: none;"]) .hgroup a:before {}
 {% endhighlight %}
 
-Ode rnehmen wir als Beispiel ein Bild in einem ``figure``-Element. Es wird anders formatiert, wenn eine ``figcaption`` zusätzlich ausgegeben wird:
+Oder nehmen wir als Beispiel ein Bild in einem ``figure``-Element. 
 
 {% highlight "html" %}
 <figure>
@@ -51,6 +48,8 @@ Ode rnehmen wir als Beispiel ein Bild in einem ``figure``-Element. Es wird ander
   <figcaption>A great looking tart.</figcaption>
 </figure>
 {% endhighlight %}
+
+Es wird mit Hilfe des ``has()``-Selektors anders formatiert, wenn eine ``figcaption`` zusätzlich ausgegeben wird:
 
 {% highlight "css" %}
 figure:has(figcaption) {
