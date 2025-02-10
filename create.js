@@ -30,9 +30,15 @@ const date = now.toISOString().replace('T', ' ').slice(0, 19) + '+00:00';
 
 const content = `---
 date: ${date}
+icon:
 tags:
     - css
 title: ${title}
+sources:
+    - title: 
+      url:
+    - title:
+      url:  
 ---
 
 Jetzt kann es losgehen! 	🚀
