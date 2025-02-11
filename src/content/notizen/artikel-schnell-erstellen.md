@@ -4,7 +4,6 @@ icon: 11ty
 tags:
     - 11ty
 title: Artikel schnell erstellen
-eleventyExcludeFromCollections: true
 sources: 
     - title: Das Original
       url: https://deepakness.com/blog/create-posts-faster-11ty/
