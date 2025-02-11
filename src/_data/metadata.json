@@ -1,13 +1,13 @@
 {
   "title": "CSS-Weblog",
-  "url": "https://css-weblog.netlify.app",
+  "url": "http://css-weblog.de",
   "description": "Ein kleines Blog über Webstandards, HTML, CSS",
   "lang": "de",
   "feed": {
     "subtitle": "CSS-Weblog",
     "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://css-weblog.netlify.app"
+    "path": "/feed.xml",
+    "id": "http://css-weblog.de"
   },
   "author": {
     "name": "Jens Grochtdreis",
