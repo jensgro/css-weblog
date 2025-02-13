@@ -12,16 +12,16 @@ const markdownLib = markdownIt({
   linkify: true,
   typographer: true
 })
-  .use(markdownItAnchor, {
-    slugify: slugifyString,
-    tabIndex: false,
-    permalink: markdownItAnchor.permalink.headerLink({
-      class: 'heading-anchor'
-    })
-  })
+  // .use(markdownItAnchor, {
+  //   slugify: slugifyString,
+  //   tabIndex: false,
+  //   permalink: markdownItAnchor.permalink.headerLink({
+  //     class: 'heading-anchor'
+  //   })
+  // })
   .use(markdownItClass, {
-    ol: 'list',
-    ul: 'list'
+    ol: 'list list--ol',
+    ul: 'list list--ul',
   })
   .use(markdownItFootnote)
   .use(markdownitMark)
