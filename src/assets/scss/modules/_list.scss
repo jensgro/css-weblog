@@ -1,13 +1,18 @@
 @use "../config" as *;
 .list {
-    list-style-type: square;
     padding-left: $space4;
 
     li {
-        margin-bottom: $space2;
-
         &::marker {
             color: var(--list-marker-color);
         }
     }
+}
+
+.list--ul {
+    list-style-type: square;
+}
+
+.list--ol {
+    list-style-type: decimal;
 }

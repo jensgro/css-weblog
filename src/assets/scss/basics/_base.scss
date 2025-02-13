@@ -219,7 +219,7 @@ h5 {font-size: rem(20);}
 
 p code, li code {
   display: inline-block;
-  padding: 0.001em 0.4em;
+  padding: 0 0.4em;
   font-family: $systemfonts-mono;
   background: var(--code-bg);
   border-radius: $space1;
