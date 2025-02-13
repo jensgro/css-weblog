@@ -1,0 +1,35 @@
+[
+    {
+        "title": "MDN über das dialog-Element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog",
+        "info": ""
+    },{
+        "title": "Dialogs and popovers seem similar. How are they different?",
+        "url": "https://hidde.blog/dialog-modal-popover-differences/",
+        "info": ""
+    },{
+        "title": "What’s the Difference Between HTML’s Dialog Element and Popovers?",
+        "url": "https://frontendmasters.com/blog/whats-the-difference-between-htmls-dialog-element-and-popovers/",
+        "info": ""
+    },{
+        "title": "On popover accessibility: what the browser does and doesn’t do",
+        "url": "https://hidde.blog/popover-accessibility/",
+        "info": ""
+    },{
+        "title": "Dialog dilemmas and modal mischief: on building popovers",
+        "url": "https://talks.hiddedevries.nl/VZNuWJ",
+        "info": ""
+    },{
+        "title": "Use the dialog element (reasonably)",
+        "url": "https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html",
+        "info": ""
+    },{
+        "title": "Building a dialog component",
+        "url": "https://web.dev/articles/building/a-dialog-component",
+        "info": ""
+    },{
+        "title": "Tooltips mit Popover",
+        "url": "https://wiki.selfhtml.org/wiki/Infobox/Tooltips_mit_Popover",
+        "info": ""
+    }
+]
