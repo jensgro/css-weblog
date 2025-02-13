@@ -1,7 +1,6 @@
 ---
 title: Einen Teil eines Nunjucks-Loops durchlaufen
-date: 2025-02-12
-eleventyExcludeFromCollections: true
+date: 2025-02-13
 icon: nunjucks
 tags:
     - nunjucks
