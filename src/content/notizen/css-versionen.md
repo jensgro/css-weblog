@@ -1,6 +1,5 @@
 ---
 title: CSS soll versioniert werden
-permalink: css-versionen.html
 date: 2025-01-01
 icon: css
 tags:
