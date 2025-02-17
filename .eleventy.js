@@ -21,6 +21,8 @@ const {
 // filters
 const htmlDateString = require(configPath+"filters/date.js").htmlDateString;
 const head = require(configPath+"filters/head.js");
+const rssDate = require(configPath+"filters/dateRfc3339.js");
+const getNewestCollectionItemDate = require(configPath+"filters/getNewestCollectionItemDate.js");
 
 // collections
 const article = require(configPath+"collections/article.js");
@@ -29,6 +31,7 @@ const notizen = require(configPath+"collections/notizen.js");
 const notizenDescending = require(configPath+"collections/notizenDescending.js");
 const linktipps = require(configPath+"collections/linktipps.js");
 const linktippsDescending = require(configPath+"collections/linktippsDescending.js");
+const rssCollection = require(configPath+"collections/rssCollection.js");
 
 // plugins
 const markdownLib = require(configPath+'plugins/markdown.js');
@@ -47,6 +50,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("htmlDateString", htmlDateString);
   eleventyConfig.addFilter("head", head);
+  eleventyConfig.addFilter("rssDate", rssDate);
+  eleventyConfig.addFilter("getNewestCollectionItemDate", getNewestCollectionItemDate);
 
   eleventyConfig.addCollection("article", article);
   eleventyConfig.addCollection("articleDescending", articleDescending);
@@ -54,6 +59,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("notizenDescending", notizenDescending);
   eleventyConfig.addCollection("linktipps", linktipps);
   eleventyConfig.addCollection("linktippsDescending", linktippsDescending);
+  eleventyConfig.addCollection("rssCollection", rssCollection);
 
   eleventyConfig.setDataDeepMerge(true);
 

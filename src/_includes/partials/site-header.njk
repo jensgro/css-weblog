@@ -7,7 +7,10 @@
         {% endif %}
      </div>
      {% if templateClass != "tmpl-home"%}
-     <div class="date">{{ date | htmlDateString }}</div>
+      <div class="date">Veröffentlicht am {{ date | htmlDateString }}</div>
+      {% if updated %}
+      <div class="date">Aktualisiert am {{ updated | htmlDateString }}</div>  
+      {% endif %}
      {% endif %}    
     </header>
   </div>

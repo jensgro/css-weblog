@@ -15,7 +15,12 @@
         "title": "On popover accessibility: what the browser does and doesn’t do",
         "url": "https://hidde.blog/popover-accessibility/",
         "info": ""
-    },{
+    }, {
+        "title": "The Popover API is now Baseline Newly available",
+        "url": "https://web.dev/blog/popover-baseline/",
+        "info": ""
+    },    
+    {
         "title": "Dialog dilemmas and modal mischief: on building popovers",
         "url": "https://talks.hiddedevries.nl/VZNuWJ",
         "info": ""
