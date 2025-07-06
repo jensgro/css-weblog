@@ -1,10 +1,10 @@
 ---
-date: 2025-06-08 15:32:35+00:00
+date: 2025-07-06
 icon: css
 tags:
   - css
   - konferenz
-title: Cssday 2025
+title: CSSDay 2025
 sources:
   - title: CSSDay
     url: https://cssday.nl/
@@ -83,7 +83,7 @@ Ich bin auf die Aufzeichnung gespannt, damit ich den Vortrag noch einmal in Ruhe
 
 Miriam Suzanne war viele Jahre sehr stark in der Weiterentwicklung von Sass beschäftigt, hatte auch mal ein eigenes Sass-Gridsystem erstellt. In den letzten Jahren engagiert sie sich sehr für neue Standards. Container Queries haben wir ihr zu verdanken.
 
-Nun hat sie sich um eine Spezifikation für [Funktionen und Mixins](https://slides.oddbird.net/mixins/cssday/) innerhalb von CSS bemüht. Im Prinzip war der Vortrag eine rein theoretische Geschichte, denn es gibt noch keine Implementierung. Wobei das nicht ganz stimmt, denn es gibt einen [Codepen von ihr](https://codepen.io/miriamsuzanne/pen/EajgabR) der in aktuellen Chromium-Browsern funktioniert. Es besteht also eine leichte Hoffnung.
+Nun hat sie sich um eine Spezifikation für [Funktionen und Mixins](https://slides.oddbird.net/mixins/cssday/) innerhalb von CSS bemüht. Im Prinzip war der Vortrag eine rein theoretische Geschichte, denn es gibt noch keine Implementierung. Wobei das nicht ganz stimmt, denn es gibt einen [Codepen von ihr](https://codepen.io/miriamsuzanne/pen/EajgabR), der in aktuellen Chromium-Browsern funktioniert. Es besteht also eine leichte Hoffnung.
 
 Die Ideen sind vielversprechend. Werden sie Realität und sterben die Browser aus, die nichts damit anfangen können, dann gibt es zwei Argumente weniger hat für Sass.
 
@@ -185,3 +185,7 @@ Vorträge von Bruce Lawsin haben immer einen esten Hintergrund, werden aber imme
 Der Titel des Vortrags erklärte sich aus einem alten, englischen Märchen. Er nahm dessen Versatzstücke wunderbar herbei, um sie für das eigentliche Thema zu benutzen. Bruce kann wunderbar Geschichten erzählen. Das ist schon eine hohe Kunst, die wenige beherrschen, speziell bei technisch orientierten Konferenzen.
 
 Früher arbeitete Bruce bei Opera, mittlerweile arbeitet er für Vivaldi. Bekannt dürfte er hauptsächlich über seine profunde Kenntnis in Sachen Accessibilty sein. Aber darum ging es nicht. [Sein Vortrag](https://speakerdeck.com/brucel/cssday-amsterdam) drehte sich um WebApps und warum Apples Weigerung, diese auf iOS zuzulassen, eine sehr schlechte Entscheidung ist. Natürlich behandelte er auch die Bedeutung von Smartphones ausserhalb der westlichen Industriestaaten und die Nachteile der Abschottung von iOS gegenüber alternativen Browsern. Ich habe durch diesen Vortrag wenig Neues gelernt, bekam aber den Sachstand kompakt zusammengefasst.
+
+## Fazit
+
+Ich werde versuchen, auch nächstes Jahr wieder auf diese Konferenz zu kommen. Die inhaltliche Mischung war super, die Vortragenden im Wesentlichen auch. Es ist eine Mischung aus Inspiration und Wissensvermittlung. Dazu kommt die perfekte Organisation und die tollen Gespräche in den Pausen und nach der Veranstaltung. Für CSS-Profis ist diese Konferenz in meinen Augen ein Muss. Und ich bin sehr froh, dass Teil meines Eintritts der Zugang zu allen Videos ist. Sollte man die Reise nach Amsterdam scheuen und nur Interesse an den Vortträgen hegen, kann man auch einen Videozugang (live und als Archiv) stark verbilligt buchen.
