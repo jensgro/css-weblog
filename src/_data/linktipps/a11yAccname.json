@@ -1,0 +1,67 @@
+[
+	  {
+    "id": 1541024637,
+    "title": "Accessible Name Calculation",
+    "note": "",
+    "excerpt": "",
+    "url": "https://accessibleit.disability.illinois.edu/courses/aria-intro/slide14.html",
+    "folder": "A11y / Accessible Name",
+    "tags": "",
+    "created": "2026-01-13T15:02:17.125Z",
+    "cover": "",
+    "highlights": "",
+    "favorite": false
+  },
+  {
+    "id": 1231294074,
+    "title": "Providing Accessible Names and Descriptions",
+    "note": "Bei welcher Rolle ist es notwendig, einen accessible Name zu vergeben?",
+    "excerpt": "Accessibility resources free online from the international standards organization: W3C Web Accessibility Initiative (WAI).",
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole",
+    "folder": "A11y / Accessible Name",
+    "tags": "a11y, aria, wcag",
+    "created": "2025-07-08T06:17:16.358Z",
+    "cover": "https://www.w3.org/WAI/assets/images/social-sharing-default.jpg",
+    "highlights": "",
+    "favorite": false
+  },
+  {
+    "id": 1231290439,
+    "title": "The order of accessible name computation steps",
+    "note": "sehr gute und kurze Erklärung",
+    "excerpt": "Today I learned in which order accessible names are computed, and how you can evaluate this computation in Chrome DevTools.",
+    "url": "https://www.stefanjudis.com/today-i-learned/the-order-of-accessible-name-computation-steps/",
+    "folder": "A11y / Accessible Name",
+    "tags": "",
+    "created": "2025-07-08T06:16:31.075Z",
+    "cover": "https://res.cloudinary.com/dfcwuxv3l/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_900,c_fit,co_rgb:232129,g_south_west,x_70,y_160,l_text:oswald_84_bold_line_spacing_-34:The%20order%20of%20accessible%20name%20computation%20steps/w_900,c_fit,co_rgb:232129,g_north_west,x_70,y_540,l_text:ubuntu_38:%40stefanjudis/stefan-judis-website/social-image-with-new-dude",
+    "highlights": "",
+    "favorite": false
+  },
+  {
+    "id": 265793379,
+    "title": "HTML elements and accessible names",
+    "note": "",
+    "excerpt": "",
+    "url": "https://russmaxdesign.github.io/html-elements-names/",
+    "folder": "A11y / Accessible Name",
+    "tags": "aria, a11y",
+    "created": "2021-05-03T06:43:30.060Z",
+    "cover": "",
+    "highlights": "",
+    "favorite": true
+  },
+	  {
+    "id": 1741904517,
+    "title": "ARIA Labels for Web Accessibility: Complete 2025 Implementation Guide",
+    "note": "",
+    "excerpt": "Master ARIA labels, roles, and states for WCAG 2.2 compliance. Comprehensive guide covering aria-label, aria-labelledby, aria-describedby, live regions, and modern best practices for accessible web applications in 2025.",
+    "url": "https://www.allaccessible.org/de/blog/implementing-aria-labels-for-web-accessibility",
+    "folder": "A11y / ARIA / aria-label",
+    "tags": "aria, aria-label",
+    "created": "2026-06-02T09:37:36.885Z",
+    "cover": "https://www.allaccessible.org/_next/image?url=%2Fblog%2Fimplementing-aria-labels-for-web-accessibility.jpeg&w=1920&q=75",
+    "highlights": "",
+    "favorite": false
+  }
+]
